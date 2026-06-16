@@ -1,0 +1,52 @@
+.cs-bee-segment {
+  position: absolute;
+  left: 8%;
+  width: auto !important;
+  right: auto;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.cs-bee-a { top: 10%; left: 6%; }
+.cs-bee-b { top: 38%; left: 72%; }
+.cs-bee-c { top: 68%; left: 8%; }
+
+.cs-bee-wrap {
+  animation: beeBob 2.6s ease-in-out infinite;
+}
+
+.cs-bee-character {
+  width: min(120px, 15vw);
+  height: auto;
+  display: block;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.45));
+  transform-origin: center center;
+}
+
+.cs-bee-facing-right {
+  transform: scaleX(-1);
+}
+
+.cs-bee-facing-left {
+  transform: scaleX(1);
+}
+
+@keyframes beeBob {
+  0%, 100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-bee-character {
+    width: min(88px, 22vw);
+  }
+
+  .cs-bee-c {
+    display: none;
+  }
+}

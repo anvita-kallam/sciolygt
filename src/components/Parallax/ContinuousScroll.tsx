@@ -9,6 +9,7 @@ import {
   OakForest,
   PineForest,
 } from "./ParallaxGraphics";
+import ScrollBeeCharacter from "./ScrollBeeCharacter";
 import "./ContinuousScroll.css";
 
 type ScrollLayerProps = {
@@ -156,6 +157,8 @@ const ContinuousScroll = ({ scrollEnd, heroHeight, ridgeOverlap, isMobile }: Con
         <Forest />
       </ScrollLayer>
     ))}
+
+    <ScrollBeeCharacter scrollEnd={scrollEnd} heroHeight={heroHeight} />
   </div>
 );
 
