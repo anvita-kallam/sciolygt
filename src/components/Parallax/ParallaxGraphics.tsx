@@ -77,6 +77,31 @@ export const MountainsMid = () => (
 
 export const CampusSkyline = () => (
   <svg viewBox="0 0 1440 350" preserveAspectRatio="none" className="layer-svg">
+    {/* Side blocks kept symmetric around x=720 */}
+    <rect x="480" y="200" width="120" height="150" fill="#0a2848" />
+    <rect x="840" y="200" width="120" height="150" fill="#0a2848" />
+    <rect x="500" y="180" width="80" height="25" fill="#0a2848" />
+    <rect x="860" y="180" width="80" height="25" fill="#0a2848" />
+
+    <rect x="300" y="230" width="90" height="120" fill="#082038" />
+    <rect x="1050" y="230" width="90" height="120" fill="#082038" />
+    <rect x="330" y="212" width="40" height="18" fill="#082038" />
+    <rect x="1070" y="212" width="40" height="18" fill="#082038" />
+
+    <rect x="150" y="260" width="80" height="90" fill="#061830" />
+    <rect x="1210" y="260" width="80" height="90" fill="#061830" />
+
+    {[500, 530, 560].map((y) =>
+      [495, 515, 535, 555].map((x) => (
+        <rect key={`${x}-${y}`} x={x} y={y} width="8" height="10" fill="#b3a369" opacity="0.15" />
+      ))
+    )}
+    {[500, 530, 560].map((y) =>
+      [885, 905, 925, 945].map((x) => (
+        <rect key={`${x}-${y}`} x={x} y={y} width="8" height="10" fill="#b3a369" opacity="0.15" />
+      ))
+    )}
+
     <g fill="#0c3055">
       {/* Tech Tower-inspired center mass */}
       <rect x="675" y="92" width="90" height="258" />
@@ -97,21 +122,6 @@ export const CampusSkyline = () => (
       ))}
       <text x="720" y="90" textAnchor="middle" textLength="90" lengthAdjust="spacingAndGlyphs" fill="#b3a369" fontSize="12" fontFamily="serif" fontWeight="bold" opacity="0.85">TECH</text>
     </g>
-    <rect x="480" y="200" width="120" height="150" fill="#0a2848" />
-    <rect x="500" y="180" width="80" height="25" fill="#0a2848" />
-    <rect x="820" y="190" width="140" height="160" fill="#0a2848" />
-    <rect x="850" y="170" width="80" height="25" fill="#0a2848" />
-    <rect x="980" y="210" width="100" height="140" fill="#082038" />
-    <rect x="1010" y="195" width="40" height="20" fill="#082038" />
-    <rect x="300" y="230" width="90" height="120" fill="#082038" />
-    <rect x="1100" y="240" width="110" height="110" fill="#061830" />
-    <rect x="150" y="260" width="80" height="90" fill="#061830" />
-    <rect x="1250" y="250" width="100" height="100" fill="#061830" />
-    {[500, 530, 560].map((y) =>
-      [495, 515, 535, 555].map((x) => (
-        <rect key={`${x}-${y}`} x={x} y={y} width="8" height="10" fill="#b3a369" opacity="0.15" />
-      ))
-    )}
   </svg>
 );
 
