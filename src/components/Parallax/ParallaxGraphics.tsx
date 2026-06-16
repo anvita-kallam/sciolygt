@@ -78,12 +78,17 @@ export const MountainsMid = () => (
 export const CampusSkyline = () => (
   <svg viewBox="0 0 1440 350" preserveAspectRatio="none" className="layer-svg">
     <g fill="#0c3055">
-      <rect x="680" y="80" width="80" height="270" />
-      <rect x="695" y="60" width="50" height="25" />
-      <rect x="700" y="100" width="40" height="12" fill="#b3a369" opacity="0.7" />
-      <rect x="700" y="130" width="40" height="12" fill="#b3a369" opacity="0.5" />
-      <rect x="700" y="160" width="40" height="12" fill="#b3a369" opacity="0.5" />
-      <text x="720" y="210" textAnchor="middle" fill="#b3a369" fontSize="14" fontFamily="serif" fontWeight="bold" opacity="0.8">TECH</text>
+      {/* Tech Tower-inspired center mass */}
+      <rect x="675" y="92" width="90" height="258" />
+      <rect x="642" y="140" width="33" height="210" />
+      <rect x="765" y="140" width="33" height="210" />
+      <polygon points="720,44 680,92 760,92" />
+      <rect x="692" y="78" width="56" height="14" />
+      <path d="M690,168 Q720,132 750,168 L750,194 L690,194 Z" />
+      <rect x="697" y="108" width="46" height="10" fill="#b3a369" opacity="0.65" />
+      <rect x="697" y="124" width="46" height="10" fill="#b3a369" opacity="0.5" />
+      <rect x="697" y="140" width="46" height="10" fill="#b3a369" opacity="0.45" />
+      <text x="720" y="230" textAnchor="middle" fill="#b3a369" fontSize="14" fontFamily="serif" fontWeight="bold" opacity="0.8">TECH</text>
     </g>
     <rect x="480" y="200" width="120" height="150" fill="#0a2848" />
     <rect x="500" y="180" width="80" height="25" fill="#0a2848" />
