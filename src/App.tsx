@@ -14,7 +14,14 @@ import "./App.css";
 
 function App() {
   const contentRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLElement>(null);
   const [scrollEnd, setScrollEnd] = useState(8000);
+  const [heroHeight, setHeroHeight] = useState(
+    () => Math.max(window.innerHeight * 1.3, 700)
+  );
+  const [ridgeOverlap, setRidgeOverlap] = useState(
+    () => Math.max(window.innerHeight * 0.02, 24)
+  );
   const [clientWidth, setClientWidth] = useState(window.innerWidth);
   const [clientHeight, setClientHeight] = useState(window.innerHeight);
   const isMobile = clientWidth < 768;
@@ -23,13 +30,18 @@ function App() {
     const update = () => {
       setClientWidth(window.innerWidth);
       setClientHeight(window.innerHeight);
+      setRidgeOverlap(Math.max(window.innerHeight * 0.02, 24));
       if (contentRef.current) {
         setScrollEnd(contentRef.current.scrollHeight);
+      }
+      if (heroRef.current) {
+        setHeroHeight(heroRef.current.offsetHeight);
       }
     };
     update();
     const observer = new ResizeObserver(update);
     if (contentRef.current) observer.observe(contentRef.current);
+    if (heroRef.current) observer.observe(heroRef.current);
     window.addEventListener("resize", update);
     return () => {
       observer.disconnect();
@@ -40,10 +52,15 @@ function App() {
   return (
     <ParallaxProvider>
       <div className="app">
-        <ContinuousScroll scrollEnd={scrollEnd} isMobile={isMobile} />
+        <ContinuousScroll
+          scrollEnd={scrollEnd}
+          heroHeight={heroHeight}
+          ridgeOverlap={ridgeOverlap}
+          isMobile={isMobile}
+        />
         <NavBar />
         <div className="scroll-content" ref={contentRef}>
-          <section id="home">
+          <section id="home" ref={heroRef}>
             <ParallaxHero
               clientWidth={clientWidth}
               clientHeight={clientHeight}

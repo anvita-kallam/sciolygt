@@ -40,9 +40,11 @@ const About = () => (
           </div>
         </ContentParallax>
 
-        <ContentParallax speed={-12} className="about-image-wrap">
-          <img src="/images/home/techtower.jpg" alt="Georgia Tech campus" className="about-image" />
-        </ContentParallax>
+        <div className="about-image-column">
+          <ContentParallax speed={2} className="about-image-wrap">
+            <img src="/images/home/techtower.jpg" alt="Georgia Tech campus" className="about-image" />
+          </ContentParallax>
+        </div>
       </div>
 
       <div className="team-section">

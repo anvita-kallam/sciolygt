@@ -160,6 +160,68 @@ export const ForegroundHills = () => (
   </svg>
 );
 
+/** Curved mountain ridge for hero → scroll seam */
+export const MountainRidgeSeam = ({
+  className = "",
+  idPrefix = "ridge",
+}: {
+  className?: string;
+  idPrefix?: string;
+}) => (
+  <svg viewBox="0 0 1440 200" preserveAspectRatio="none" className={className} aria-hidden>
+    <defs>
+      <linearGradient id={`${idPrefix}Sky`} x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#0a2848" />
+        <stop offset="100%" stopColor="#062040" />
+      </linearGradient>
+      <linearGradient id={`${idPrefix}Back`} x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#073050" />
+        <stop offset="100%" stopColor="#020810" />
+      </linearGradient>
+      <linearGradient id={`${idPrefix}Mid`} x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#062040" />
+        <stop offset="100%" stopColor="#020810" />
+      </linearGradient>
+      <linearGradient id={`${idPrefix}Front`} x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#041830" />
+        <stop offset="100%" stopColor="#020810" />
+      </linearGradient>
+      <linearGradient id={`${idPrefix}Pine`} x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#0a2038" />
+        <stop offset="100%" stopColor="#020810" />
+      </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="1440" height="200" fill={`url(#${idPrefix}Sky)`} />
+    <path
+      d="M0,0 L1440,0 L1440,130 Q1300,90 1180,120 Q1060,80 940,105 Q820,65 700,115 Q580,75 460,125 Q340,85 220,135 Q120,110 0,145 Z"
+      fill={`url(#${idPrefix}Sky)`}
+    />
+    <path
+      d="M0,200 L0,145 Q120,110 220,135 Q340,85 460,125 Q580,75 700,115 Q820,65 940,105 Q1060,80 1180,120 Q1300,90 1440,130 L1440,200 Z"
+      fill={`url(#${idPrefix}Back)`}
+    />
+    <path
+      d="M0,200 L0,155 Q160,115 300,150 Q440,100 580,140 Q720,95 860,135 Q1000,105 1140,145 Q1280,115 1440,160 L1440,200 Z"
+      fill={`url(#${idPrefix}Mid)`}
+    />
+    <path
+      d="M0,200 L0,168 Q200,125 400,158 Q600,118 720,152 Q900,128 1080,162 Q1260,138 1440,175 L1440,200 Z"
+      fill={`url(#${idPrefix}Front)`}
+    />
+    <g fill={`url(#${idPrefix}Pine)`}>
+      {[30, 75, 120, 175, 230, 290, 355, 420, 490, 560, 635, 710, 790, 870, 955, 1040, 1130, 1220, 1310, 1390].map((x, i) => {
+        const h = 22 + (i % 4) * 10;
+        const w = 10 + (i % 3) * 4;
+        const base = 168 + Math.sin(i * 1.3) * 18 + (i % 5) * 4;
+        return (
+          <polygon key={x} points={`${x},${base + 32} ${x - w},${base + 32} ${x},${base + 32 - h} ${x + w},${base + 32}`} />
+        );
+      })}
+    </g>
+    <rect x="0" y="175" width="1440" height="25" fill="#020810" />
+  </svg>
+);
+
 export const ScienceDecor = () => (
   <svg viewBox="0 0 1440 400" preserveAspectRatio="none" className="layer-svg science-decor">
     <g opacity="0.12" stroke="#b3a369" strokeWidth="2" fill="none">

@@ -1,27 +1,21 @@
 import type { ReactNode } from "react";
 import { Parallax } from "react-scroll-parallax";
 import {
-  AtlantaSkyline,
-  AuroraBand,
-  BuzzBee,
-  CampusSkyline,
   CloudLayer,
   ForegroundHills,
-  MixedForest,
-  MoonGlow,
+  MountainRidgeSeam,
   MountainsBack,
   MountainsFront,
   MountainsMid,
+  MixedForest,
   OakForest,
   PineForest,
-  RamblinWreck,
-  ScienceDecor,
-  TechTowerSilhouette,
 } from "./ParallaxGraphics";
 import "./ContinuousScroll.css";
 
 type ScrollLayerProps = {
   scrollEnd: number;
+  startScroll: number;
   speed: number;
   className: string;
   children: ReactNode;
@@ -31,6 +25,7 @@ type ScrollLayerProps = {
 
 const ScrollLayer = ({
   scrollEnd,
+  startScroll,
   speed,
   speedX = 0,
   className,
@@ -38,7 +33,7 @@ const ScrollLayer = ({
   opacityRange,
 }: ScrollLayerProps) => (
   <Parallax
-    startScroll={0}
+    startScroll={startScroll}
     endScroll={scrollEnd}
     translateY={[0, speed * -8]}
     translateX={speedX ? [0, speedX * -8] : undefined}
@@ -71,114 +66,73 @@ const FOREST_LAYERS = [
   { id: "4", Forest: PineForest, speed: -12 },
   { id: "5", Forest: OakForest, speed: -13 },
   { id: "6", Forest: MixedForest, speed: -11 },
+  { id: "7", Forest: PineForest, speed: -10 },
 ] as const;
 
 type ContinuousScrollProps = {
   scrollEnd: number;
+  heroHeight: number;
+  ridgeOverlap: number;
   isMobile: boolean;
 };
 
-const ContinuousScroll = ({ scrollEnd, isMobile }: ContinuousScrollProps) => (
-  <div className="continuous-scroll" aria-hidden>
+const ContinuousScroll = ({ scrollEnd, heroHeight, ridgeOverlap, isMobile }: ContinuousScrollProps) => (
+  <div className="continuous-scroll" style={{ top: heroHeight - ridgeOverlap }} aria-hidden>
     <div className="cs-sky" />
-    <div className="cs-haze cs-haze-a" />
-    <div className="cs-haze cs-haze-b" />
-    <div className="cs-haze cs-haze-c" />
-    <div className="cs-haze cs-haze-d" />
 
-    <ScrollLayer scrollEnd={scrollEnd} speed={-2} className="cs-aurora">
-      <AuroraBand />
-    </ScrollLayer>
+    <div className="cs-ridge">
+      <MountainRidgeSeam idPrefix="scrollRidge" />
+    </div>
 
-    <ScrollLayer scrollEnd={scrollEnd} speed={-3} className="cs-stars">
+    <div className="cs-seam">
+      <ForegroundHills />
+      <PineForest />
+    </div>
+
+    <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-1} className="cs-stars">
       <div className="cs-starfield" />
       <div className="cs-starfield cs-starfield-dense" />
     </ScrollLayer>
 
-    <ScrollLayer scrollEnd={scrollEnd} speed={-2} className="cs-moon">
-      <MoonGlow />
+    <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-3} className="cs-particles">
+      <div className="cs-gold-particles" />
     </ScrollLayer>
 
-    <ScrollLayer scrollEnd={scrollEnd} speed={-4} speedX={-3} className="cs-clouds cs-clouds-a" opacityRange={[0.5, 0.2]}>
+    <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-4} speedX={-3} className="cs-clouds cs-clouds-a" opacityRange={[0.45, 0.2]}>
       <CloudLayer variant="far" />
     </ScrollLayer>
-    <ScrollLayer scrollEnd={scrollEnd} speed={-5} speedX={4} className="cs-clouds cs-clouds-b" opacityRange={[0.55, 0.22]}>
+    <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-5} speedX={4} className="cs-clouds cs-clouds-b" opacityRange={[0.5, 0.22]}>
       <CloudLayer variant="mid" />
     </ScrollLayer>
-    <ScrollLayer scrollEnd={scrollEnd} speed={-6} speedX={-4} className="cs-clouds cs-clouds-c" opacityRange={[0.6, 0.25]}>
+    <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-6} speedX={-4} className="cs-clouds cs-clouds-c" opacityRange={[0.55, 0.25]}>
       <CloudLayer variant="near" />
     </ScrollLayer>
-    <ScrollLayer scrollEnd={scrollEnd} speed={-5} speedX={3} className="cs-clouds cs-clouds-d" opacityRange={[0.55, 0.28]}>
+    <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-5} speedX={3} className="cs-clouds cs-clouds-d" opacityRange={[0.5, 0.28]}>
       <CloudLayer variant="mid" />
     </ScrollLayer>
+    {!isMobile && (
+      <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-4} speedX={-2} className="cs-clouds cs-clouds-e" opacityRange={[0.4, 0.18]}>
+        <CloudLayer variant="far" />
+      </ScrollLayer>
+    )}
 
     {MOUNTAIN_LAYERS.map(({ id, Mountain, speed }) => (
-      <ScrollLayer key={id} scrollEnd={scrollEnd} speed={speed} className={`cs-drift cs-drift-${id}`}>
+      <ScrollLayer
+        key={id}
+        scrollEnd={scrollEnd}
+        startScroll={heroHeight}
+        speed={speed}
+        className={`cs-drift cs-drift-${id}`}
+      >
         <Mountain />
       </ScrollLayer>
     ))}
 
     {FOREST_LAYERS.map(({ id, Forest, speed }) => (
-      <ScrollLayer key={id} scrollEnd={scrollEnd} speed={speed} className={`cs-forest cs-forest-${id}`}>
+      <ScrollLayer key={id} scrollEnd={scrollEnd} startScroll={heroHeight} speed={speed} className={`cs-forest cs-forest-${id}`}>
         <Forest />
       </ScrollLayer>
     ))}
-
-    {/* Atlanta campus & skyline */}
-    <ScrollLayer scrollEnd={scrollEnd} speed={-8} className="cs-campus cs-campus-a">
-      <CampusSkyline />
-    </ScrollLayer>
-    <ScrollLayer scrollEnd={scrollEnd} speed={-9} className="cs-campus cs-campus-b">
-      <AtlantaSkyline />
-    </ScrollLayer>
-    <ScrollLayer scrollEnd={scrollEnd} speed={-7} className="cs-campus cs-campus-c">
-      <CampusSkyline />
-    </ScrollLayer>
-    <ScrollLayer scrollEnd={scrollEnd} speed={-10} className="cs-campus cs-campus-d">
-      <AtlantaSkyline />
-    </ScrollLayer>
-
-    {/* Tech Tower silhouettes */}
-    <ScrollLayer scrollEnd={scrollEnd} speed={-12} speedX={-2} className="cs-tower cs-tower-a">
-      <TechTowerSilhouette opacity={0.45} />
-    </ScrollLayer>
-    <ScrollLayer scrollEnd={scrollEnd} speed={-14} speedX={3} className="cs-tower cs-tower-b">
-      <TechTowerSilhouette opacity={0.35} />
-    </ScrollLayer>
-    <ScrollLayer scrollEnd={scrollEnd} speed={-11} speedX={-4} className="cs-tower cs-tower-c">
-      <TechTowerSilhouette opacity={0.4} />
-    </ScrollLayer>
-
-    {/* GT mascots */}
-    <ScrollLayer scrollEnd={scrollEnd} speed={-5} speedX={6} className="cs-mascot cs-bee-a">
-      <BuzzBee opacity={0.7} />
-    </ScrollLayer>
-    <ScrollLayer scrollEnd={scrollEnd} speed={-6} speedX={-5} className="cs-mascot cs-bee-b">
-      <BuzzBee opacity={0.55} />
-    </ScrollLayer>
-    <ScrollLayer scrollEnd={scrollEnd} speed={-4} speedX={4} className="cs-mascot cs-bee-c">
-      <BuzzBee opacity={0.5} />
-    </ScrollLayer>
-    <ScrollLayer scrollEnd={scrollEnd} speed={-9} speedX={-10} className="cs-mascot cs-wreck-a">
-      <RamblinWreck opacity={0.65} />
-    </ScrollLayer>
-    <ScrollLayer scrollEnd={scrollEnd} speed={-10} speedX={8} className="cs-mascot cs-wreck-b">
-      <RamblinWreck opacity={0.5} />
-    </ScrollLayer>
-
-    <ScrollLayer scrollEnd={scrollEnd} speed={-4} className="cs-science">
-      <ScienceDecor />
-    </ScrollLayer>
-
-    {!isMobile && (
-      <ScrollLayer scrollEnd={scrollEnd} speed={-3} className="cs-particles">
-        <div className="cs-floating-particles" />
-      </ScrollLayer>
-    )}
-
-    <ScrollLayer scrollEnd={scrollEnd} speed={-14} className="cs-foreground">
-      <ForegroundHills />
-    </ScrollLayer>
   </div>
 );
 

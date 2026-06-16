@@ -3,6 +3,12 @@
   min-height: 100vh;
 }
 
+#home {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
 .scroll-content {
   position: relative;
   z-index: 1;

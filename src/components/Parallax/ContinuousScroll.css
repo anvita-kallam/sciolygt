@@ -1,6 +1,8 @@
 .continuous-scroll {
   position: absolute;
-  inset: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
@@ -12,28 +14,77 @@
   background: linear-gradient(
     180deg,
     #020810 0%,
-    #041830 8%,
-    #062040 22%,
-    #0a2848 40%,
-    #062040 58%,
-    #041830 75%,
+    #041830 6%,
+    #062040 18%,
+    #0a2848 35%,
+    #062040 55%,
+    #041830 72%,
     #062040 88%,
     #020810 100%
   );
 }
 
-.cs-haze {
+/* Curved crest at scroll backdrop top */
+.cs-ridge {
   position: absolute;
+  top: 0;
   left: 0;
   right: 0;
-  height: 35%;
+  width: 100%;
+  height: max(16vh, 140px);
+  z-index: 3;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cs-ridge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #020810;
+  z-index: 0;
+}
+
+.cs-ridge svg {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Treeline continues below the ridge */
+.cs-seam {
+  position: absolute;
+  top: max(10vh, 90px);
+  left: 0;
+  right: 0;
+  height: 28vh;
+  max-height: 280px;
+  min-height: 160px;
+  background: transparent;
+  z-index: 2;
   pointer-events: none;
 }
 
-.cs-haze-a { top: 12%; background: linear-gradient(180deg, transparent, rgba(4, 24, 48, 0.25) 45%, transparent); }
-.cs-haze-b { top: 32%; background: linear-gradient(180deg, transparent, rgba(2, 8, 16, 0.3) 50%, transparent); }
-.cs-haze-c { top: 52%; background: linear-gradient(180deg, transparent, rgba(6, 32, 64, 0.25) 45%, transparent); }
-.cs-haze-d { top: 72%; background: linear-gradient(180deg, transparent, rgba(4, 24, 48, 0.2) 50%, transparent); }
+.cs-seam .layer-svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: block;
+}
+
+.cs-seam .layer-svg:first-child {
+  bottom: 0;
+  height: 45%;
+  opacity: 0.9;
+}
+
+.cs-seam .layer-svg:last-child {
+  bottom: 0;
+  height: 75%;
+}
 
 .cs-layer {
   position: absolute;
@@ -48,160 +99,125 @@
   display: block;
 }
 
-.cs-aurora { top: 0; height: 30%; opacity: 0.9; }
-.cs-stars { top: 0; height: 40%; }
-.cs-moon { top: 0; height: 24%; }
+.cs-stars {
+  inset: 0;
+  height: 100%;
+  z-index: 0;
+}
 
 .cs-starfield {
   position: absolute;
   inset: 0;
   background-image:
     radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.6) 50%, transparent 50%),
-    radial-gradient(1px 1px at 50% 15%, rgba(212,200,150,0.7) 50%, transparent 50%),
-    radial-gradient(1px 1px at 85% 40%, rgba(255,255,255,0.4) 50%, transparent 50%);
+    radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.4) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 50% 15%, rgba(212,200,150,0.7) 50%, transparent 50%),
+    radial-gradient(1px 1px at 70% 40%, rgba(255,255,255,0.5) 50%, transparent 50%),
+    radial-gradient(1px 1px at 85% 70%, rgba(255,255,255,0.3) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 20% 80%, rgba(212,200,150,0.5) 50%, transparent 50%),
+    radial-gradient(1px 1px at 60% 85%, rgba(255,255,255,0.4) 50%, transparent 50%),
+    radial-gradient(1px 1px at 90% 25%, rgba(255,255,255,0.5) 50%, transparent 50%);
 }
 
 .cs-starfield-dense {
   background-image:
-    radial-gradient(1px 1px at 25% 35%, rgba(255,255,255,0.3) 50%, transparent 50%),
-    radial-gradient(1px 1px at 70% 25%, rgba(212,200,150,0.4) 50%, transparent 50%);
+    radial-gradient(1px 1px at 5% 35%, rgba(255,255,255,0.35) 50%, transparent 50%),
+    radial-gradient(1px 1px at 15% 55%, rgba(255,255,255,0.25) 50%, transparent 50%),
+    radial-gradient(1px 1px at 25% 12%, rgba(212,200,150,0.4) 50%, transparent 50%),
+    radial-gradient(1px 1px at 42% 72%, rgba(255,255,255,0.3) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 55% 45%, rgba(255,255,255,0.45) 50%, transparent 50%),
+    radial-gradient(1px 1px at 68% 18%, rgba(212,200,150,0.35) 50%, transparent 50%),
+    radial-gradient(1px 1px at 78% 58%, rgba(255,255,255,0.3) 50%, transparent 50%),
+    radial-gradient(1px 1px at 92% 42%, rgba(255,255,255,0.35) 50%, transparent 50%);
   opacity: 0.7;
 }
 
+.cs-gold-particles {
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 12% 45%, rgba(179, 163, 105, 0.25) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 28% 65%, rgba(179, 163, 105, 0.2) 50%, transparent 50%),
+    radial-gradient(2px 2px at 45% 35%, rgba(179, 163, 105, 0.15) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 62% 55%, rgba(179, 163, 105, 0.2) 50%, transparent 50%),
+    radial-gradient(2px 2px at 75% 40%, rgba(179, 163, 105, 0.18) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 88% 60%, rgba(179, 163, 105, 0.22) 50%, transparent 50%);
+}
+
+.cs-particles {
+  inset: 0;
+  height: 100%;
+}
+
 .cs-clouds {
-  height: 18vh;
-  max-height: 190px;
-  mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
-  -webkit-mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+  height: 22vh;
+  max-height: 220px;
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
 }
 
-.cs-clouds-a { top: 2%; }
-.cs-clouds-b { top: 14%; }
-.cs-clouds-c { top: 28%; }
-.cs-clouds-d { top: 48%; }
+.cs-clouds-a { top: 4%; }
+.cs-clouds-b { top: 18%; }
+.cs-clouds-c { top: 34%; }
+.cs-clouds-d { top: 52%; }
+.cs-clouds-e { top: 70%; }
 
-/* Mountains — dense stack, stronger toward bottom */
+/* Mountains — stack from seam downward */
 .cs-drift {
-  height: 44vh;
-  max-height: 440px;
+  height: 46vh;
+  max-height: 460px;
   min-height: 260px;
-  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 62%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 62%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 65%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 65%, transparent 100%);
 }
 
-.cs-drift-a { top: 2%;  opacity: 0.38; }
-.cs-drift-b { top: 8%;  opacity: 0.42; }
-.cs-drift-c { top: 14%; opacity: 0.4; }
-.cs-drift-d { top: 22%; opacity: 0.48; }
-.cs-drift-e { top: 30%; opacity: 0.45; }
-.cs-drift-f { top: 38%; opacity: 0.52; }
-.cs-drift-g { top: 46%; opacity: 0.5; }
-.cs-drift-h { top: 54%; opacity: 0.55; }
-.cs-drift-i { top: 62%; opacity: 0.52; }
+.cs-drift-a { top: 0;   opacity: 0.42; }
+.cs-drift-b { top: 7%;  opacity: 0.46; }
+.cs-drift-c { top: 14%; opacity: 0.44; }
+.cs-drift-d { top: 22%; opacity: 0.5; }
+.cs-drift-e { top: 30%; opacity: 0.48; }
+.cs-drift-f { top: 38%; opacity: 0.54; }
+.cs-drift-g { top: 46%; opacity: 0.52; }
+.cs-drift-h { top: 54%; opacity: 0.56; }
+.cs-drift-i { top: 62%; opacity: 0.54; }
 .cs-drift-j { top: 70%; opacity: 0.58; }
 .cs-drift-k { top: 78%; opacity: 0.55; }
 .cs-drift-l { top: 86%; opacity: 0.6; }
 
-/* Forests — staggered pine, oak, mixed */
+/* Forests */
 .cs-forest {
-  height: 28vh;
-  max-height: 280px;
-  min-height: 160px;
-  mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 55%, transparent 95%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 55%, transparent 95%);
+  height: 30vh;
+  max-height: 300px;
+  min-height: 170px;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 58%, transparent 95%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 58%, transparent 95%);
 }
 
-.cs-forest-1 { top: 6%;  opacity: 0.4; }
-.cs-forest-2 { top: 16%; opacity: 0.45; }
-.cs-forest-3 { top: 26%; opacity: 0.42; }
-.cs-forest-4 { top: 38%; opacity: 0.5; }
-.cs-forest-5 { top: 52%; opacity: 0.48; }
-.cs-forest-6 { top: 66%; opacity: 0.55; }
-
-/* Atlanta campus & downtown */
-.cs-campus {
-  height: 32vh;
-  max-height: 320px;
-  mask-image: linear-gradient(to bottom, transparent, black 30%, black 65%, transparent);
-  -webkit-mask-image: linear-gradient(to bottom, transparent, black 30%, black 65%, transparent);
-}
-
-.cs-campus-a { top: 18%; opacity: 0.5; }
-.cs-campus-b { top: 35%; opacity: 0.45; }
-.cs-campus-c { top: 55%; opacity: 0.55; }
-.cs-campus-d { top: 74%; opacity: 0.5; }
-
-/* Tech Tower silhouettes */
-.cs-tower {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: auto;
-  width: auto;
-}
-
-.cs-tower .gt-tower-silhouette {
-  height: min(220px, 28vh);
-  width: auto;
-  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
-}
-
-.cs-tower-a { top: 28%; left: 12%; right: auto; }
-.cs-tower-b { top: 58%; right: 10%; left: auto; }
-.cs-tower-c { top: 78%; left: 50%; transform: translateX(-50%); }
-
-/* GT mascots */
-.cs-mascot {
-  position: absolute;
-  display: flex;
-  width: auto !important;
-  left: auto;
-  right: auto;
-}
-
-.cs-mascot .gt-bee { width: min(100px, 12vw); height: auto; }
-.cs-mascot .gt-wreck { width: min(200px, 22vw); height: auto; }
-
-.cs-bee-a { top: 22%; right: 8%; }
-.cs-bee-b { top: 48%; left: 6%; }
-.cs-bee-b .gt-bee { transform: scaleX(-1); }
-.cs-bee-c { top: 72%; right: 12%; }
-.cs-wreck-a { top: 42%; left: 4%; align-items: flex-end; }
-.cs-wreck-b { top: 68%; right: 6%; align-items: flex-end; }
-.cs-wreck-b .gt-wreck { transform: scaleX(-1); }
-
-.cs-science {
-  top: 40%;
-  height: 35%;
-  opacity: 0.4;
-  mask-image: linear-gradient(to bottom, transparent, black 35%, transparent);
-  -webkit-mask-image: linear-gradient(to bottom, transparent, black 35%, transparent);
-}
-
-.cs-particles { inset: 0; height: 100%; }
-
-.cs-floating-particles {
-  width: 100%;
-  height: 100%;
-  background-image:
-    radial-gradient(2px 2px at 15% 30%, rgba(179,163,105,0.22) 50%, transparent 50%),
-    radial-gradient(1.5px 1.5px at 55% 50%, rgba(179,163,105,0.18) 50%, transparent 50%),
-    radial-gradient(2px 2px at 80% 70%, rgba(212,200,150,0.2) 50%, transparent 50%),
-    radial-gradient(1px 1px at 35% 80%, rgba(179,163,105,0.15) 50%, transparent 50%);
-}
-
-.cs-foreground {
-  bottom: 0;
-  height: 18vh;
-  max-height: 180px;
-  mask-image: linear-gradient(to bottom, transparent, black 45%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent, black 45%);
-}
+.cs-forest-1 { top: 1%;  opacity: 0.5; }
+.cs-forest-2 { top: 12%; opacity: 0.48; }
+.cs-forest-3 { top: 24%; opacity: 0.52; }
+.cs-forest-4 { top: 36%; opacity: 0.5; }
+.cs-forest-5 { top: 50%; opacity: 0.54; }
+.cs-forest-6 { top: 64%; opacity: 0.5; }
+.cs-forest-7 { top: 78%; opacity: 0.55; }
 
 @media (max-width: 768px) {
-  .cs-drift { height: 30vh; min-height: 180px; }
+  .cs-ridge {
+    height: max(12vh, 110px);
+  }
+
+  .cs-seam {
+    top: max(8vh, 70px);
+    height: 22vh;
+    min-height: 130px;
+  }
+
+  .cs-drift {
+    height: 32vh;
+    min-height: 180px;
+  }
+
   .cs-drift-j, .cs-drift-k, .cs-drift-l { display: none; }
-  .cs-forest-5, .cs-forest-6 { display: none; }
-  .cs-campus-c, .cs-campus-d { display: none; }
-  .cs-tower-c, .cs-wreck-b, .cs-bee-c { display: none; }
+  .cs-forest-6, .cs-forest-7 { display: none; }
+  .cs-clouds-e { display: none; }
 }
