@@ -63,7 +63,7 @@ const ScrollBeeCharacter = ({ scrollEnd, heroHeight }: ScrollBeeCharacterProps) 
         speed={-10}
         speedX={-44}
         className="cs-bee-c"
-        facingRight
+        facingRight={false}
       />
     </>
   );
