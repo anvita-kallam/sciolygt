@@ -10,7 +10,7 @@
 }
 
 .about-image-column {
-  padding-top: 16rem;
+  padding-top: 4rem;
 }
 
 .section-inner {
@@ -171,21 +171,6 @@
   transform: translate(var(--tx, 0), var(--ty, 0)) rotate(0deg) scale(1.06) !important;
 }
 
-.team-bubble--lg .team-photo-ring {
-  width: 76px;
-  height: 76px;
-}
-
-.team-bubble--md .team-photo-ring {
-  width: 60px;
-  height: 60px;
-}
-
-.team-bubble--sm .team-photo-ring {
-  width: 48px;
-  height: 48px;
-}
-
 .team-photo-ring {
   border-radius: 50%;
   padding: 3px;
@@ -193,6 +178,8 @@
   box-shadow:
     0 8px 28px rgba(0, 0, 0, 0.45),
     0 0 20px rgba(179, 163, 105, 0.12);
+  width: 72px;
+  height: 72px;
 }
 
 .team-photo {
@@ -262,7 +249,7 @@
   }
 
   .about-image-column {
-    padding-top: 5rem;
+    padding-top: 2rem;
   }
 
   .team-cloud {
