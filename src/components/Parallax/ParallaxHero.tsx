@@ -12,7 +12,6 @@ import {
   MountainsFront,
   MountainsMid,
   PineForest,
-  ScienceDecor,
 } from "./ParallaxGraphics";
 import "./ParallaxHero.css";
 
@@ -125,10 +124,6 @@ const ParallaxHero = ({ clientHeight, isMobile }: ParallaxHeroProps) => (
 
     <ParallaxLayer speed={-11} clientHeight={clientHeight} className="layer-mountains-front">
       <MountainsFront />
-    </ParallaxLayer>
-
-    <ParallaxLayer speed={-13} clientHeight={clientHeight} className="layer-science">
-      <ScienceDecor />
     </ParallaxLayer>
 
     <ParallaxLayer speed={-15} clientHeight={clientHeight} className="layer-foreground">
