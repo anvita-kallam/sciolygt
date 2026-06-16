@@ -1,0 +1,315 @@
+.parallax-hero {
+  position: relative;
+  width: 100%;
+  height: 130vh;
+  min-height: 700px;
+  overflow: hidden;
+}
+
+.parallax-sky {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    #020810 0%,
+    #041830 35%,
+    #062040 65%,
+    #0a2848 85%,
+    #0c3055 100%
+  );
+}
+
+.parallax-layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.layer-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.layer-aurora {
+  top: 0;
+  height: 55%;
+}
+
+.layer-stars {
+  top: 0;
+  height: 65%;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.6) 50%, transparent 50%),
+    radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.4) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 50% 15%, rgba(212,200,150,0.7) 50%, transparent 50%),
+    radial-gradient(1px 1px at 70% 40%, rgba(255,255,255,0.5) 50%, transparent 50%),
+    radial-gradient(1px 1px at 85% 70%, rgba(255,255,255,0.3) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 20% 80%, rgba(212,200,150,0.5) 50%, transparent 50%),
+    radial-gradient(1px 1px at 60% 85%, rgba(255,255,255,0.4) 50%, transparent 50%),
+    radial-gradient(1px 1px at 90% 25%, rgba(255,255,255,0.5) 50%, transparent 50%);
+}
+
+.stars-dense {
+  background-image:
+    radial-gradient(1px 1px at 5% 35%, rgba(255,255,255,0.35) 50%, transparent 50%),
+    radial-gradient(1px 1px at 15% 55%, rgba(255,255,255,0.25) 50%, transparent 50%),
+    radial-gradient(1px 1px at 25% 12%, rgba(212,200,150,0.4) 50%, transparent 50%),
+    radial-gradient(1px 1px at 42% 72%, rgba(255,255,255,0.3) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 55% 45%, rgba(255,255,255,0.45) 50%, transparent 50%),
+    radial-gradient(1px 1px at 68% 18%, rgba(212,200,150,0.35) 50%, transparent 50%),
+    radial-gradient(1px 1px at 78% 58%, rgba(255,255,255,0.3) 50%, transparent 50%),
+    radial-gradient(1px 1px at 92% 42%, rgba(255,255,255,0.35) 50%, transparent 50%),
+    radial-gradient(1px 1px at 38% 38%, rgba(255,255,255,0.2) 50%, transparent 50%),
+    radial-gradient(1px 1px at 82% 82%, rgba(212,200,150,0.25) 50%, transparent 50%);
+  opacity: 0.7;
+}
+
+.layer-moon {
+  top: 0;
+  height: 50%;
+}
+
+.layer-clouds-far {
+  top: 8%;
+  height: 35%;
+}
+
+.layer-clouds-mid {
+  top: 5%;
+  height: 38%;
+}
+
+.layer-clouds-near {
+  top: 12%;
+  height: 32%;
+}
+
+.layer-mountains-back {
+  bottom: 22%;
+  height: 48%;
+}
+
+.layer-mountains-mid {
+  bottom: 12%;
+  height: 52%;
+}
+
+.layer-mountains-front {
+  bottom: 0;
+  height: 58%;
+}
+
+.layer-campus {
+  bottom: 18%;
+  height: 42%;
+}
+
+.layer-forest {
+  bottom: 2%;
+  height: 35%;
+}
+
+.layer-science {
+  bottom: 5%;
+  height: 70%;
+}
+
+.layer-foreground {
+  bottom: 0;
+  height: 28%;
+}
+
+.layer-ground {
+  bottom: 0;
+  height: 35%;
+}
+
+.ground-gradient {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    var(--bg-dark) 0%,
+    rgba(2, 8, 16, 0.85) 40%,
+    transparent 100%
+  );
+}
+
+.layer-particles {
+  inset: 0;
+  height: 100%;
+}
+
+.floating-particles {
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 12% 45%, rgba(179, 163, 105, 0.25) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 28% 65%, rgba(179, 163, 105, 0.2) 50%, transparent 50%),
+    radial-gradient(2px 2px at 45% 35%, rgba(179, 163, 105, 0.15) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 62% 55%, rgba(179, 163, 105, 0.2) 50%, transparent 50%),
+    radial-gradient(2px 2px at 75% 40%, rgba(179, 163, 105, 0.18) 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 88% 60%, rgba(179, 163, 105, 0.22) 50%, transparent 50%);
+  animation: particleDrift 20s ease-in-out infinite alternate;
+}
+
+@keyframes particleDrift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  padding-top: 5rem;
+}
+
+.hero-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gt-gold);
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-weight: 400;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  color: var(--gt-white);
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--gt-gold-light);
+}
+
+.hero-subtitle {
+  max-width: 620px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--gt-gray);
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero-description {
+  max-width: 560px;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(168, 173, 179, 0.85);
+  margin-bottom: 2.5rem;
+  text-shadow: 0 1px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-btn {
+  padding: 0.85rem 1.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+}
+
+.hero-btn.primary {
+  background: var(--gt-gold);
+  color: var(--gt-navy-dark);
+  box-shadow: 0 4px 24px rgba(179, 163, 105, 0.35);
+}
+
+.hero-btn.primary:hover {
+  box-shadow: 0 6px 32px rgba(179, 163, 105, 0.5);
+}
+
+.hero-btn.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--gt-white);
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn.secondary:hover {
+  border-color: var(--gt-gold);
+  color: var(--gt-gold-light);
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gt-gray);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  animation: fadeInUp 1s ease 1s both;
+}
+
+.scroll-arrow {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--gt-gold), transparent);
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.4; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .parallax-hero {
+    height: 115vh;
+    min-height: 600px;
+  }
+
+  .layer-campus,
+  .layer-science,
+  .layer-clouds-near {
+    display: none;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .scroll-hint {
+    bottom: 1.5rem;
+  }
+}

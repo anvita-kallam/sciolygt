@@ -1,0 +1,47 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.scroll-content {
+  position: relative;
+  z-index: 1;
+}
+
+.scroll-content .section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Integrated text over parallax — sections below hero only */
+.scroll-content section:not(#home) h1,
+.scroll-content section:not(#home) h2,
+.scroll-content section:not(#home) h3,
+.scroll-content section:not(#home) h4,
+.scroll-content section:not(#home) p,
+.scroll-content section:not(#home) li,
+.scroll-content section:not(#home) span {
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.85), 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gt-gold);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--gt-gold-light);
+}
