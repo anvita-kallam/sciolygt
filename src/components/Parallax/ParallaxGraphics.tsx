@@ -90,7 +90,15 @@ export const CampusSkyline = () => (
       {[700, 712, 724, 736].map((x, i) => (
         <rect key={x} x={x} y="116" width="7" height="34" fill="#b3a369" opacity={0.65 - i * 0.08} />
       ))}
-      <text x="720" y="108" textAnchor="middle" fill="#b3a369" fontSize="12" fontFamily="serif" fontWeight="bold" opacity="0.8">TECH</text>
+      {[694, 712, 730].map((x, i) => (
+        <path
+          key={x}
+          d={`M${x},178 Q${x + 6},166 ${x + 12},178 L${x + 12},194 L${x},194 Z`}
+          fill="#b3a369"
+          opacity={0.5 - i * 0.08}
+        />
+      ))}
+      <text x="720" y="108" textAnchor="middle" textLength="86" lengthAdjust="spacingAndGlyphs" fill="#b3a369" fontSize="12" fontFamily="serif" fontWeight="bold" opacity="0.8">TECH</text>
     </g>
     <rect x="480" y="200" width="120" height="150" fill="#0a2848" />
     <rect x="500" y="180" width="80" height="25" fill="#0a2848" />
