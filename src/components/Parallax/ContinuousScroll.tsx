@@ -58,6 +58,8 @@ const MOUNTAIN_LAYERS = [
   { id: "m", Mountain: MountainsBack, speed: -5 },
   { id: "n", Mountain: MountainsMid, speed: -7 },
   { id: "o", Mountain: MountainsFront, speed: -6 },
+  { id: "p", Mountain: MountainsBack, speed: -8 },
+  { id: "q", Mountain: MountainsFront, speed: -7 },
 ] as const;
 
 const FOREST_LAYERS = [
@@ -71,6 +73,8 @@ const FOREST_LAYERS = [
   { id: "8", Forest: OakForest, speed: -12 },
   { id: "9", Forest: MixedForest, speed: -13 },
   { id: "10", Forest: PineForest, speed: -11 },
+  { id: "11", Forest: OakForest, speed: -12 },
+  { id: "12", Forest: MixedForest, speed: -13 },
 ] as const;
 
 type ContinuousScrollProps = {
