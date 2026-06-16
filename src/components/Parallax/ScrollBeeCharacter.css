@@ -10,17 +10,17 @@
 .cs-bee-a { top: 10%; left: 6%; }
 .cs-bee-b { top: 38%; left: 72%; }
 .cs-bee-c { top: 68%; left: 8%; }
+.cs-bee-sponsors { top: 54%; left: 82%; }
 
 .cs-bee-wrap {
-  animation: beeBob 2.6s ease-in-out infinite;
+  animation: beeBob 1.6s ease-in-out infinite;
 }
 
 .cs-bee-character {
   width: min(120px, 15vw);
   height: auto;
   display: block;
-  mix-blend-mode: multiply;
-  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 10px 26px rgba(0, 0, 0, 0.55));
   transform-origin: center center;
 }
 
@@ -35,9 +35,11 @@
 @keyframes beeBob {
   0%, 100% {
     translate: 0 0;
+    rotate: -4deg;
   }
   50% {
-    translate: 0 -10px;
+    translate: 0 -18px;
+    rotate: 6deg;
   }
 }
 
@@ -48,5 +50,9 @@
 
   .cs-bee-c {
     display: none;
+  }
+
+  .cs-bee-sponsors {
+    left: 70%;
   }
 }
