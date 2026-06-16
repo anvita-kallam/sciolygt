@@ -354,18 +354,21 @@ export const AtlantaSkyline = () => (
 export const TechTowerSilhouette = ({ opacity = 0.35 }: { opacity?: number }) => (
   <svg viewBox="0 0 120 280" className="gt-graphic gt-tower-silhouette" opacity={opacity} aria-hidden>
     <g fill="#0c3055">
-      <rect x="35" y="80" width="50" height="200" />
-      <polygon points="60,15 30,75 90,75" />
-      <rect x="42" y="60" width="36" height="22" />
-      {[[48, 88], [72, 88], [48, 115], [72, 115]].map(([x, y]) => (
-        <rect key={`${x}-${y}`} x={x} y={y} width="10" height="14" rx="5" fill="#061830" />
+      <rect x="18" y="120" width="16" height="160" />
+      <rect x="86" y="120" width="16" height="160" />
+      <rect x="34" y="88" width="52" height="192" />
+      <polygon points="60,20 28,82 92,82" />
+      <rect x="41" y="72" width="38" height="16" />
+      <path d="M42,116 Q60,94 78,116 L78,134 L42,134 Z" />
+      {[[48, 142], [72, 142], [48, 170], [72, 170]].map(([x, y]) => (
+        <rect key={`${x}-${y}`} x={x} y={y} width="10" height="16" rx="5" fill="#061830" />
       ))}
     </g>
     <g fill="#b3a369" opacity="0.6" fontFamily="Georgia, serif" fontSize="10" fontWeight="bold">
-      <text x="60" y="145" textAnchor="middle">T</text>
-      <text x="60" y="158" textAnchor="middle">E</text>
-      <text x="60" y="171" textAnchor="middle">C</text>
-      <text x="60" y="184" textAnchor="middle">H</text>
+      <text x="60" y="206" textAnchor="middle">T</text>
+      <text x="60" y="219" textAnchor="middle">E</text>
+      <text x="60" y="232" textAnchor="middle">C</text>
+      <text x="60" y="245" textAnchor="middle">H</text>
     </g>
   </svg>
 );
