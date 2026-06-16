@@ -82,17 +82,18 @@ export const CampusSkyline = () => (
       <rect x="675" y="92" width="90" height="258" />
       <rect x="642" y="140" width="33" height="210" />
       <rect x="765" y="140" width="33" height="210" />
-      <rect x="600" y="172" width="42" height="22" />
-      <rect x="798" y="172" width="22" height="22" />
+      <rect x="600" y="172" width="42" height="178" />
+      <rect x="798" y="172" width="22" height="178" />
+      <rect x="642" y="172" width="156" height="22" />
       <polygon points="720,44 680,92 760,92" />
       <rect x="692" y="78" width="56" height="14" />
       <path d="M690,168 Q720,132 750,168 L750,194 L690,194 Z" />
       {[700, 712, 724, 736].map((x, i) => (
         <rect key={x} x={x} y="116" width="7" height="34" fill="#b3a369" opacity={0.65 - i * 0.08} />
       ))}
-      <path d="M696,180 Q720,156 744,180 L744,196 L696,196 Z" fill="#b3a369" opacity="0.5" />
+      <path d="M688,212 Q720,142 752,212 L752,248 L688,248 Z" fill="#b3a369" opacity="0.5" />
       {[708, 720, 732].map((x) => (
-        <rect key={x} x={x} y="170" width="2" height="26" fill="#0c3055" opacity="0.6" />
+        <rect key={x} x={x} y="168" width="2" height="80" fill="#0c3055" opacity="0.6" />
       ))}
       <text x="720" y="90" textAnchor="middle" textLength="90" lengthAdjust="spacingAndGlyphs" fill="#b3a369" fontSize="12" fontFamily="serif" fontWeight="bold" opacity="0.85">TECH</text>
     </g>
