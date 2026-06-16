@@ -61,7 +61,7 @@ const ScrollBeeCharacter = ({ scrollEnd, heroHeight }: ScrollBeeCharacterProps) 
         startScroll={sponsorsEnd}
         endScroll={scrollEnd}
         speed={-10}
-        speedX={-44}
+        speedX={44}
         className="cs-bee-c"
         facingRight={false}
       />
