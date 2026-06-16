@@ -255,9 +255,9 @@ export const ScienceDecor = () => (
     </g>
     <g opacity="0.1" stroke="#b3a369" strokeWidth="1.5" fill="none" transform="translate(1320, 200)">
       <circle cx="0" cy="0" r="8" fill="#b3a369" opacity="0.3" />
-      <ellipse cx="0" cy="0" rx="50" ry="20" transform="rotate(0)" />
-      <ellipse cx="0" cy="0" rx="50" ry="20" transform="rotate(60)" />
-      <ellipse cx="0" cy="0" rx="50" ry="20" transform="rotate(120)" />
+      <ellipse cx="0" cy="0" rx="72" ry="20" transform="rotate(0)" />
+      <ellipse cx="0" cy="0" rx="72" ry="20" transform="rotate(60)" />
+      <ellipse cx="0" cy="0" rx="72" ry="20" transform="rotate(120)" />
     </g>
     <g opacity="0.08" fill="#b3a369" transform="translate(200, 280)">
       <path d="M0,0 L-15,60 L15,60 Z" />

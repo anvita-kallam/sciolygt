@@ -55,6 +55,9 @@ const MOUNTAIN_LAYERS = [
   { id: "j", Mountain: MountainsBack, speed: -7 },
   { id: "k", Mountain: MountainsMid, speed: -4 },
   { id: "l", Mountain: MountainsFront, speed: -6 },
+  { id: "m", Mountain: MountainsBack, speed: -5 },
+  { id: "n", Mountain: MountainsMid, speed: -7 },
+  { id: "o", Mountain: MountainsFront, speed: -6 },
 ] as const;
 
 const FOREST_LAYERS = [
@@ -65,6 +68,9 @@ const FOREST_LAYERS = [
   { id: "5", Forest: OakForest, speed: -13 },
   { id: "6", Forest: MixedForest, speed: -11 },
   { id: "7", Forest: PineForest, speed: -10 },
+  { id: "8", Forest: OakForest, speed: -12 },
+  { id: "9", Forest: MixedForest, speed: -13 },
+  { id: "10", Forest: PineForest, speed: -11 },
 ] as const;
 
 type ContinuousScrollProps = {
@@ -99,10 +105,21 @@ const ContinuousScroll = ({ scrollEnd, heroHeight, ridgeOverlap, isMobile }: Con
     <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-5} speedX={3} className="cs-clouds cs-clouds-d" opacityRange={[0.5, 0.28]}>
       <CloudLayer variant="mid" />
     </ScrollLayer>
+    <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-6} speedX={-1} className="cs-clouds cs-clouds-f" opacityRange={[0.48, 0.22]}>
+      <CloudLayer variant="near" />
+    </ScrollLayer>
+    <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-5} speedX={2} className="cs-clouds cs-clouds-g" opacityRange={[0.46, 0.2]}>
+      <CloudLayer variant="mid" />
+    </ScrollLayer>
     {!isMobile && (
-      <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-4} speedX={-2} className="cs-clouds cs-clouds-e" opacityRange={[0.4, 0.18]}>
-        <CloudLayer variant="far" />
-      </ScrollLayer>
+      <>
+        <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-4} speedX={-2} className="cs-clouds cs-clouds-e" opacityRange={[0.4, 0.18]}>
+          <CloudLayer variant="far" />
+        </ScrollLayer>
+        <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-6} speedX={3} className="cs-clouds cs-clouds-h" opacityRange={[0.42, 0.18]}>
+          <CloudLayer variant="near" />
+        </ScrollLayer>
+      </>
     )}
 
     {MOUNTAIN_LAYERS.map(({ id, Mountain, speed }) => (

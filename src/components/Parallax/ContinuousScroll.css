@@ -99,6 +99,9 @@
 .cs-clouds-c { top: 34%; }
 .cs-clouds-d { top: 52%; }
 .cs-clouds-e { top: 70%; }
+.cs-clouds-f { top: 12%; }
+.cs-clouds-g { top: 44%; }
+.cs-clouds-h { top: 82%; }
 
 /* Mountains — stack from seam downward */
 .cs-drift {
@@ -121,6 +124,9 @@
 .cs-drift-j { top: 70%; opacity: 0.58; }
 .cs-drift-k { top: 78%; opacity: 0.55; }
 .cs-drift-l { top: 86%; opacity: 0.6; }
+.cs-drift-m { top: 18%; opacity: 0.47; }
+.cs-drift-n { top: 58%; opacity: 0.56; }
+.cs-drift-o { top: 92%; opacity: 0.58; }
 
 /* Forests */
 .cs-forest {
@@ -138,6 +144,9 @@
 .cs-forest-5 { top: 50%; opacity: 0.54; }
 .cs-forest-6 { top: 64%; opacity: 0.5; }
 .cs-forest-7 { top: 78%; opacity: 0.55; }
+.cs-forest-8 { top: 20%; opacity: 0.49; }
+.cs-forest-9 { top: 58%; opacity: 0.53; }
+.cs-forest-10 { top: 86%; opacity: 0.54; }
 
 @media (max-width: 768px) {
   .cs-drift {
@@ -145,7 +154,7 @@
     min-height: 180px;
   }
 
-  .cs-drift-j, .cs-drift-k, .cs-drift-l { display: none; }
-  .cs-forest-6, .cs-forest-7 { display: none; }
-  .cs-clouds-e { display: none; }
+  .cs-drift-j, .cs-drift-k, .cs-drift-l, .cs-drift-o { display: none; }
+  .cs-forest-6, .cs-forest-7, .cs-forest-10 { display: none; }
+  .cs-clouds-e, .cs-clouds-h { display: none; }
 }
