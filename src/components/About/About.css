@@ -1,0 +1,247 @@
+.about-section {
+  position: relative;
+  background: transparent;
+  padding: 6rem 3rem;
+  overflow: hidden;
+}
+
+.section-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gt-gold);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--gt-gold-light);
+}
+
+.about-header {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.about-copy {
+  will-change: transform;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--gt-gray);
+  margin-bottom: 1.25rem;
+}
+
+.about-stats {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 0;
+  border-left: 2px solid var(--gt-gold);
+  padding-left: 1.25rem;
+  min-width: 120px;
+}
+
+.stat-value {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--gt-gold);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--gt-gray);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.about-image-wrap {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.55);
+  will-change: transform;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.team-section {
+  padding-top: 2rem;
+}
+
+.team-heading {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  color: var(--gt-gold-light);
+  text-align: center;
+}
+
+/* Organic floating profile cloud */
+.team-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem 2rem;
+  padding: 1rem 0 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.team-bubble {
+  flex: 0 0 auto;
+  will-change: transform;
+}
+
+.team-bubble-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.team-bubble-inner:hover {
+  transform: translate(var(--tx, 0), var(--ty, 0)) rotate(0deg) scale(1.06) !important;
+}
+
+.team-bubble--lg .team-photo-ring {
+  width: 76px;
+  height: 76px;
+}
+
+.team-bubble--md .team-photo-ring {
+  width: 60px;
+  height: 60px;
+}
+
+.team-bubble--sm .team-photo-ring {
+  width: 48px;
+  height: 48px;
+}
+
+.team-photo-ring {
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(145deg, var(--gt-gold), rgba(179, 163, 105, 0.15) 60%, transparent);
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(179, 163, 105, 0.12);
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 2px solid rgba(2, 8, 16, 0.6);
+}
+
+.team-bubble-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  max-width: 110px;
+}
+
+.team-group-pill {
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gt-gold);
+  opacity: 0.85;
+}
+
+.team-name {
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+.team-role {
+  font-size: 0.68rem;
+  color: var(--gt-gray);
+  line-height: 1.25;
+}
+
+.team-groups-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  opacity: 0.5;
+}
+
+.team-legend-pill {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gt-gold);
+  padding: 0.25rem 0.6rem;
+  border: 1px solid rgba(179, 163, 105, 0.2);
+  border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .about-header {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image-wrap {
+    order: -1;
+  }
+
+  .team-cloud {
+    gap: 1.25rem;
+  }
+
+  .team-bubble--lg .team-photo-ring {
+    width: 64px;
+    height: 64px;
+  }
+}

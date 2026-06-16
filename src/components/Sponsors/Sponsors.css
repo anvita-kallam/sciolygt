@@ -1,0 +1,93 @@
+.sponsors-section {
+  background: transparent;
+  padding: 8rem 3rem;
+}
+
+.sponsors-intro {
+  max-width: 640px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--gt-gray);
+  margin-bottom: 3rem;
+}
+
+.sponsor-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.sponsor-tier {
+  padding: 1.5rem 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(179, 163, 105, 0.15);
+  background: transparent;
+}
+
+.tier-gold {
+  border-bottom-color: rgba(179, 163, 105, 0.35);
+}
+
+.tier-silver {
+  border-color: rgba(192, 192, 192, 0.3);
+}
+
+.tier-bronze {
+  border-color: rgba(205, 127, 50, 0.3);
+}
+
+.tier-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.tier-name {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--gt-gold-light);
+}
+
+.tier-amount {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gt-gold);
+}
+
+.tier-benefit {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--gt-gray);
+}
+
+.sponsor-contact {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sponsor-contact p {
+  color: var(--gt-gray);
+}
+
+.sponsor-contact a {
+  color: var(--gt-gold);
+  font-weight: 600;
+}
+
+.sponsor-contact a:hover {
+  color: var(--gt-gold-light);
+}
+
+@media (max-width: 768px) {
+  .sponsors-section {
+    padding: 5rem 1.5rem;
+  }
+
+  .sponsor-tiers {
+    grid-template-columns: 1fr;
+  }
+}
