@@ -24,68 +24,6 @@
   );
 }
 
-/* Curved crest at scroll backdrop top */
-.cs-ridge {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: max(16vh, 140px);
-  z-index: 3;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.cs-ridge::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #020810;
-  z-index: 0;
-}
-
-.cs-ridge svg {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-/* Treeline continues below the ridge */
-.cs-seam {
-  position: absolute;
-  top: max(10vh, 90px);
-  left: 0;
-  right: 0;
-  height: 28vh;
-  max-height: 280px;
-  min-height: 160px;
-  background: transparent;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.cs-seam .layer-svg {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  display: block;
-}
-
-.cs-seam .layer-svg:first-child {
-  bottom: 0;
-  height: 45%;
-  opacity: 0.9;
-}
-
-.cs-seam .layer-svg:last-child {
-  bottom: 0;
-  height: 75%;
-}
-
 .cs-layer {
   position: absolute;
   left: 0;
@@ -202,16 +140,6 @@
 .cs-forest-7 { top: 78%; opacity: 0.55; }
 
 @media (max-width: 768px) {
-  .cs-ridge {
-    height: max(12vh, 110px);
-  }
-
-  .cs-seam {
-    top: max(8vh, 70px);
-    height: 22vh;
-    min-height: 130px;
-  }
-
   .cs-drift {
     height: 32vh;
     min-height: 180px;

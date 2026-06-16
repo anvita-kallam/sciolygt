@@ -2,8 +2,6 @@ import type { ReactNode } from "react";
 import { Parallax } from "react-scroll-parallax";
 import {
   CloudLayer,
-  ForegroundHills,
-  MountainRidgeSeam,
   MountainsBack,
   MountainsFront,
   MountainsMid,
@@ -79,15 +77,6 @@ type ContinuousScrollProps = {
 const ContinuousScroll = ({ scrollEnd, heroHeight, ridgeOverlap, isMobile }: ContinuousScrollProps) => (
   <div className="continuous-scroll" style={{ top: heroHeight - ridgeOverlap }} aria-hidden>
     <div className="cs-sky" />
-
-    <div className="cs-ridge">
-      <MountainRidgeSeam idPrefix="scrollRidge" />
-    </div>
-
-    <div className="cs-seam">
-      <ForegroundHills />
-      <PineForest />
-    </div>
 
     <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-1} className="cs-stars">
       <div className="cs-starfield" />
