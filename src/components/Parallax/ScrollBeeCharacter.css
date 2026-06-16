@@ -8,7 +8,6 @@
 }
 
 .cs-bee-a { top: 10%; left: 6%; }
-.cs-bee-b { top: 38%; left: 72%; }
 .cs-bee-c { top: 68%; left: 8%; }
 
 .cs-bee-wrap {
@@ -16,7 +15,6 @@
 }
 
 .cs-bee-a .cs-bee-wrap { animation-duration: 1.1s; }
-.cs-bee-b .cs-bee-wrap { animation-duration: 1.25s; animation-direction: reverse; }
 .cs-bee-c .cs-bee-wrap { animation-duration: 1.05s; }
 
 .cs-bee-character {
