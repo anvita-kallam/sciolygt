@@ -46,8 +46,6 @@ const ScrollBeeCharacter = ({ scrollEnd, heroHeight }: ScrollBeeCharacterProps) 
   const scrollSpan = Math.max(scrollEnd - heroHeight, 1);
   const seg1End = heroHeight + scrollSpan * 0.33;
   const seg2End = heroHeight + scrollSpan * 0.66;
-  const sponsorsStart = heroHeight + scrollSpan * 0.62;
-  const sponsorsEnd = heroHeight + scrollSpan * 0.74;
 
   return (
     <>
@@ -62,23 +60,15 @@ const ScrollBeeCharacter = ({ scrollEnd, heroHeight }: ScrollBeeCharacterProps) 
       <BeeSegment
         startScroll={seg1End}
         endScroll={seg2End}
-        speed={-10}
+        speed={-11}
         speedX={36}
         className="cs-bee-b"
         facingRight={false}
       />
       <BeeSegment
-        startScroll={sponsorsStart}
-        endScroll={sponsorsEnd}
-        speed={-11}
-        speedX={52}
-        className="cs-bee-sponsors"
-        facingRight={false}
-      />
-      <BeeSegment
         startScroll={seg2End}
         endScroll={scrollEnd}
-        speed={-9}
+        speed={-10}
         speedX={-44}
         className="cs-bee-c"
         facingRight
