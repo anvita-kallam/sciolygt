@@ -33,8 +33,8 @@ const ScrollLayer = ({
   <Parallax
     startScroll={startScroll}
     endScroll={scrollEnd}
-    translateY={[0, speed * -8]}
-    translateX={speedX ? [0, speedX * -8] : undefined}
+    translateY={[0, speed * -11]}
+    translateX={speedX ? [0, speedX * -10] : undefined}
     opacity={opacityRange}
     className={`cs-layer ${className}`}
   >
@@ -60,6 +60,8 @@ const MOUNTAIN_LAYERS = [
   { id: "o", Mountain: MountainsFront, speed: -6 },
   { id: "p", Mountain: MountainsBack, speed: -8 },
   { id: "q", Mountain: MountainsFront, speed: -7 },
+  { id: "r", Mountain: MountainsMid, speed: -9 },
+  { id: "s", Mountain: MountainsBack, speed: -10 },
 ] as const;
 
 const FOREST_LAYERS = [
@@ -75,6 +77,8 @@ const FOREST_LAYERS = [
   { id: "10", Forest: PineForest, speed: -11 },
   { id: "11", Forest: OakForest, speed: -12 },
   { id: "12", Forest: MixedForest, speed: -13 },
+  { id: "13", Forest: PineForest, speed: -14 },
+  { id: "14", Forest: OakForest, speed: -15 },
 ] as const;
 
 type ContinuousScrollProps = {
@@ -95,6 +99,15 @@ const ContinuousScroll = ({ scrollEnd, heroHeight, ridgeOverlap, isMobile }: Con
 
     <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-3} className="cs-particles">
       <div className="cs-gold-particles" />
+    </ScrollLayer>
+    <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-4} className="cs-haze cs-haze-a">
+      <div className="cs-gold-haze" />
+    </ScrollLayer>
+    <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-6} className="cs-haze cs-haze-b">
+      <div className="cs-gold-haze cs-gold-haze-strong" />
+    </ScrollLayer>
+    <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-5} className="cs-haze cs-haze-c">
+      <div className="cs-gold-haze" />
     </ScrollLayer>
 
     <ScrollLayer scrollEnd={scrollEnd} startScroll={heroHeight} speed={-4} speedX={-3} className="cs-clouds cs-clouds-a" opacityRange={[0.45, 0.2]}>

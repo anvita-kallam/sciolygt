@@ -87,6 +87,42 @@
   height: 100%;
 }
 
+.cs-haze {
+  height: 26vh;
+  max-height: 260px;
+  min-height: 120px;
+  mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+}
+
+.cs-haze-a { top: 16%; opacity: 0.42; }
+.cs-haze-b { top: 46%; opacity: 0.5; }
+.cs-haze-c { top: 74%; opacity: 0.38; }
+
+.cs-gold-haze {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(179, 163, 105, 0),
+    rgba(179, 163, 105, 0.16) 24%,
+    rgba(212, 200, 150, 0.26) 50%,
+    rgba(179, 163, 105, 0.16) 76%,
+    rgba(179, 163, 105, 0)
+  );
+}
+
+.cs-gold-haze-strong {
+  background: linear-gradient(
+    90deg,
+    rgba(179, 163, 105, 0),
+    rgba(179, 163, 105, 0.2) 24%,
+    rgba(212, 200, 150, 0.32) 50%,
+    rgba(179, 163, 105, 0.2) 76%,
+    rgba(179, 163, 105, 0)
+  );
+}
+
 .cs-clouds {
   height: 22vh;
   max-height: 220px;
@@ -129,6 +165,8 @@
 .cs-drift-o { top: 92%; opacity: 0.58; }
 .cs-drift-p { top: 26%; opacity: 0.5; }
 .cs-drift-q { top: 82%; opacity: 0.57; }
+.cs-drift-r { top: 40%; opacity: 0.55; }
+.cs-drift-s { top: 96%; opacity: 0.6; }
 
 /* Forests */
 .cs-forest {
@@ -151,6 +189,8 @@
 .cs-forest-10 { top: 86%; opacity: 0.54; }
 .cs-forest-11 { top: 30%; opacity: 0.5; }
 .cs-forest-12 { top: 72%; opacity: 0.55; }
+.cs-forest-13 { top: 42%; opacity: 0.52; }
+.cs-forest-14 { top: 92%; opacity: 0.56; }
 
 @media (max-width: 768px) {
   .cs-drift {
@@ -158,7 +198,8 @@
     min-height: 180px;
   }
 
-  .cs-drift-j, .cs-drift-k, .cs-drift-l, .cs-drift-o, .cs-drift-q { display: none; }
-  .cs-forest-6, .cs-forest-7, .cs-forest-10, .cs-forest-12 { display: none; }
+  .cs-drift-j, .cs-drift-k, .cs-drift-l, .cs-drift-o, .cs-drift-q, .cs-drift-s { display: none; }
+  .cs-forest-6, .cs-forest-7, .cs-forest-10, .cs-forest-12, .cs-forest-14 { display: none; }
   .cs-clouds-e, .cs-clouds-h { display: none; }
+  .cs-haze-c { display: none; }
 }
