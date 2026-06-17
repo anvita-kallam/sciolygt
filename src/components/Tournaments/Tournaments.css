@@ -128,12 +128,24 @@
 }
 
 .past-column li {
+  list-style: none;
+}
+
+.past-tournament-link {
+  display: inline-block;
   padding: 0.5rem 1rem;
   background: rgba(179, 163, 105, 0.1);
   border: 1px solid rgba(179, 163, 105, 0.2);
   border-radius: 999px;
   font-size: 0.9rem;
   color: var(--gt-gold-light);
+  transition: transform 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.past-tournament-link:hover {
+  transform: translateY(-2px);
+  background: rgba(179, 163, 105, 0.18);
+  border-color: rgba(179, 163, 105, 0.35);
 }
 
 @media (max-width: 768px) {

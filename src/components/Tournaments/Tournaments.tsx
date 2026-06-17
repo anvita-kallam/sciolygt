@@ -1,6 +1,29 @@
-import { TOURNAMENTS, PAST_TOURNAMENTS } from "../../data/content";
+import { Link } from "react-router-dom";
+import { TOURNAMENTS, PAST_TOURNAMENTS, type PastTournamentLink } from "../../data/content";
 import ContentParallax from "../Parallax/ContentParallax";
 import "./Tournaments.css";
+
+const PastTournamentItem = ({ label, href }: PastTournamentLink) => {
+  const className = "past-tournament-link";
+
+  if (href.startsWith("/")) {
+    return (
+      <li>
+        <Link to={href} className={className}>
+          {label}
+        </Link>
+      </li>
+    );
+  }
+
+  return (
+    <li>
+      <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+        {label}
+      </a>
+    </li>
+  );
+};
 
 const Tournaments = () => (
   <section id="tournaments" className="tournaments-section">
@@ -50,16 +73,16 @@ const Tournaments = () => (
             <div className="past-column">
               <h4>State Tournament</h4>
               <ul>
-                {PAST_TOURNAMENTS.states.map((year) => (
-                  <li key={year}>{year}</li>
+                {PAST_TOURNAMENTS.states.map((tournament) => (
+                  <PastTournamentItem key={tournament.label} {...tournament} />
                 ))}
               </ul>
             </div>
             <div className="past-column">
               <h4>Yellow Jacket Invitational</h4>
               <ul>
-                {PAST_TOURNAMENTS.yji.map((year) => (
-                  <li key={year}>{year}</li>
+                {PAST_TOURNAMENTS.yji.map((tournament) => (
+                  <PastTournamentItem key={tournament.label} {...tournament} />
                 ))}
               </ul>
             </div>

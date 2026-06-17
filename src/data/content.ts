@@ -85,9 +85,26 @@ export const TOURNAMENTS = [
   },
 ];
 
-export const PAST_TOURNAMENTS = {
-  states: ["2022", "2023", "2024", "2025"],
-  yji: ["2024", "2025", "2026"],
+export type PastTournamentLink = {
+  label: string;
+  href: string;
+};
+
+export const PAST_TOURNAMENTS: {
+  states: PastTournamentLink[];
+  yji: PastTournamentLink[];
+} = {
+  states: [
+    { label: "2022", href: "https://www.sciolygatech.org/pastTournaments/2022" },
+    { label: "2023", href: "https://www.sciolygatech.org/pastTournaments/2023" },
+    { label: "2024", href: "https://www.sciolygatech.org/pastTournaments/2024" },
+    { label: "2025", href: "https://www.sciolygatech.org/pastTournaments/2025" },
+  ],
+  yji: [
+    { label: "2024", href: "https://www.sciolygatech.org/pastTournaments/YJI2024" },
+    { label: "2025", href: "https://www.sciolygatech.org/pastTournaments/YJI2025" },
+    { label: "2026", href: "/yji-2026" },
+  ],
 };
 
 export const GET_INVOLVED = {
