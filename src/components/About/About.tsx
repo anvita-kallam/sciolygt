@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FireflySection from "../Firefly/Firefly";
 import ContentParallax from "../Parallax/ContentParallax";
 import { ABOUT, TEAM } from "../../data/content";
@@ -39,9 +39,23 @@ const getBubbleTransform = (index: number, selected: number | null) => {
 const About = () => {
   const [selected, setSelected] = useState<number | null>(null);
 
-  const handleSelect = (index: number) => {
-    setSelected((current) => (current === index ? null : index));
+  const handleSelect = (index: number, event: React.MouseEvent) => {
+    event.stopPropagation();
+    setSelected(index);
   };
+
+  useEffect(() => {
+    if (selected === null) return;
+
+    const handlePointerDown = (event: PointerEvent) => {
+      const target = event.target as HTMLElement;
+      if (target.closest(".team-bubble")) return;
+      setSelected(null);
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    return () => document.removeEventListener("pointerdown", handlePointerDown);
+  }, [selected]);
 
   return (
     <section id="about" className="about-section">
@@ -100,7 +114,7 @@ const About = () => {
                     .filter(Boolean)
                     .join(" ")}
                   aria-pressed={isSelected}
-                  onClick={() => handleSelect(i)}
+                  onClick={(event) => handleSelect(i, event)}
                 >
                   <div
                     className="team-bubble-inner"
