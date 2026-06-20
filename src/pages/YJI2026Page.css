@@ -359,3 +359,57 @@
     border-left: 1px solid;
   }
 }
+
+@media (max-width: 768px) {
+  .yji-page {
+    padding-top: calc(3.75rem + env(safe-area-inset-top, 0px));
+  }
+
+  .yji-header {
+    padding: 2.5rem 1rem;
+  }
+
+  .yji-header h1 {
+    border-width: 3px;
+    padding: 0.85rem 1rem;
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    line-height: 1.2;
+  }
+
+  .yji-exams-section {
+    padding: 2rem 1rem;
+  }
+
+  .yji-exams-btn {
+    width: 100%;
+    max-width: 20rem;
+    font-size: 1.05rem;
+    padding: 0.9rem 1.25rem;
+  }
+
+  .yji-overall-section,
+  .yji-events-section {
+    padding: 2.5rem 1rem;
+    gap: 2.5rem;
+  }
+
+  .yji-division-title,
+  .yji-event-title {
+    font-size: 1rem;
+    border-width: 3px;
+  }
+
+  .yji-podium-school {
+    font-size: 0.82rem;
+  }
+
+  .yji-results-list li {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .yji-event-name,
+  .yji-event-school {
+    font-size: 0.85rem;
+    padding: 0.7rem 0.85rem;
+  }
+}

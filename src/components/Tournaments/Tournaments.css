@@ -150,11 +150,29 @@
 
 @media (max-width: 768px) {
   .tournaments-section {
-    padding: 5rem 1.5rem;
+    padding: 4rem 1.25rem;
   }
 
   .tournament-cards,
   .past-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tournament-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .tournament-links {
+    flex-direction: column;
+  }
+
+  .tournament-link {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+
+  .past-heading {
+    font-size: 1.5rem;
   }
 }

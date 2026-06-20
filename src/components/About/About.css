@@ -241,23 +241,46 @@
 
 @media (max-width: 768px) {
   .about-section {
-    padding: 4rem 1.5rem;
+    padding: 3.5rem 1.25rem 4rem;
   }
 
   .about-header {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .about-image-column {
-    padding-top: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .about-stats {
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    min-width: calc(50% - 0.5rem);
+    flex: 1 1 calc(50% - 0.5rem);
+    padding: 1rem 0 1rem 1rem;
+  }
+
+  .about-image {
+    min-height: 240px;
   }
 
   .team-cloud {
-    gap: 1.25rem;
+    gap: 1rem 1.25rem;
   }
 
   .team-bubble--lg .team-photo-ring {
     width: 64px;
     height: 64px;
+  }
+
+  .team-heading {
+    font-size: 1.5rem;
   }
 }
