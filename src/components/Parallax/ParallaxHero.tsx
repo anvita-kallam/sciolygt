@@ -150,8 +150,6 @@ const ParallaxHero = ({ clientHeight, isMobile }: ParallaxHeroProps) => (
         <br />
         <em>{HERO.title.split(" ").slice(1).join(" ")}</em>
       </h1>
-      <p className="hero-subtitle">{HERO.subtitle}</p>
-      <p className="hero-description">{HERO.description}</p>
       <div className="hero-actions">
         <a href="#tournaments" className="hero-btn primary">View Tournaments</a>
         <a href="#join" className="hero-btn secondary">Get Involved</a>

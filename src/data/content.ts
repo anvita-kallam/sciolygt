@@ -8,10 +8,6 @@ export const CONTACT = {
 export const HERO = {
   eyebrow: "Georgia Institute of Technology",
   title: "Science Olympiad",
-  subtitle:
-    "The Georgia Tech campus will be the bustling hub for two Science Olympiad competitions in 2026: our 3rd annual Yellow Jacket Invitational and the Georgia Division C State Tournament.",
-  description:
-    "Volunteers from Georgia Tech and other top tier universities around the country apply their expertise to run more than 23 different STEM events and create an unforgettable competition experience.",
 };
 
 export const ABOUT = {
