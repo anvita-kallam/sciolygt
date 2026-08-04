@@ -48,7 +48,16 @@ export const TEAM: TeamMember[] = [
   { name: "Yaitihya Sahoo", role: "Outreach Co-Director", img: "/images/execPics/Yaiti.jpg", group: "Outreach" },
 ];
 
-export const TOURNAMENTS = [
+export type Tournament = {
+  name: string;
+  date: string;
+  description: string;
+  details: string[];
+  links: { label: string; href: string }[];
+  highlight?: string;
+};
+
+export const TOURNAMENTS: Tournament[] = [
   {
     name: "Yellow Jacket Invitational 2027",
     date: "February 6, 2027",
