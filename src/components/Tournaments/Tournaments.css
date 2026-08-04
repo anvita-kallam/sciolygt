@@ -88,6 +88,18 @@
   box-shadow: 0 4px 20px rgba(179, 163, 105, 0.35);
 }
 
+.tournament-link-soon {
+  background: transparent;
+  color: var(--gt-gray);
+  border: 1px solid rgba(179, 163, 105, 0.35);
+  cursor: default;
+}
+
+.tournament-link-soon:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 .past-tournaments {
   padding-top: 3rem;
   border-top: 1px solid rgba(255, 255, 255, 0.06);

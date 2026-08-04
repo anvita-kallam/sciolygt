@@ -31,7 +31,7 @@ const Tournaments = () => (
       <ContentParallax speed={4}>
         <div className="section-label">Competition</div>
         <h2 className="section-title">
-          2026 Tournaments
+          2027 Tournaments
           <br />
           <em>on the Georgia Tech campus</em>
         </h2>
@@ -54,13 +54,21 @@ const Tournaments = () => (
                   <li key={detail}>{detail}</li>
                 ))}
               </ul>
-              <div className="tournament-links">
-                {tournament.links.map(({ label, href }) => (
-                  <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="tournament-link">
-                    {label}
-                  </a>
-                ))}
-              </div>
+              {tournament.links.length > 0 && (
+                <div className="tournament-links">
+                  {tournament.links.map(({ label, href }) =>
+                    href ? (
+                      <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="tournament-link">
+                        {label}
+                      </a>
+                    ) : (
+                      <span key={label} className="tournament-link tournament-link-soon">
+                        {label}
+                      </span>
+                    )
+                  )}
+                </div>
+              )}
             </article>
           </ContentParallax>
         ))}

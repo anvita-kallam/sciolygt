@@ -14,10 +14,10 @@ export const ABOUT = {
   mission:
     "Science Olympiad at Georgia Tech is an undergraduate student group with a mission to engage and empower students striving to become scientists and engineers through the Science Olympiad experience.",
   detail:
-    "We work year-round to promote Science Olympiad opportunities for students both within and outside of Georgia. We are especially excited to be hosting the Georgia Science Olympiad State Tournament for the 5th year in a row and our 3rd annual Yellow Jacket Invitational!",
+    "We work year-round to promote Science Olympiad opportunities for students both within and outside of Georgia. We are especially excited to be hosting the Georgia Science Olympiad State Tournament and our 4th annual Yellow Jacket Invitational!",
   stats: [
     { value: "5th", label: "Year Hosting States" },
-    { value: "3rd", label: "Annual YJI" },
+    { value: "4th", label: "Annual YJI" },
     { value: "23+", label: "STEM Events" },
   ],
 };
@@ -50,20 +50,20 @@ export const TEAM: TeamMember[] = [
 
 export const TOURNAMENTS = [
   {
-    name: "Yellow Jacket Invitational 2026",
-    date: "January 31, 2026",
+    name: "Yellow Jacket Invitational 2027",
+    date: "February 6, 2027",
     description:
-      "Our 3rd annual invitational welcomes Division B and Division C teams from across the region for a full day of STEM competition on the Georgia Tech campus.",
+      "Our 4th annual invitational welcomes Division B and Division C teams from across the region for a full day of STEM competition on the Georgia Tech campus.",
     details: [
-      "Registration opens: August 1st, 2025",
-      "Standard registration closes: November 1st, 2025 ($150/team)",
-      "Late registration closes: January 9th, 2026 ($180/team)",
+      "Regular registration: $190/team — August 9th – December 13th",
+      "Late registration: $210/team — December 14th – January 10th",
+      "August 9th – August 22nd: Georgia schools only",
+      "August 23rd onward: schools outside Georgia may register",
     ],
     links: [
-      { label: "Registration Form", href: "https://docs.google.com/forms/d/e/1FAIpQLSf3qhRDjCY6RJcp3QmP-PYVF-KnIJLL-k2siY1mPMOdKyfR8w/viewform?usp=sharing" },
-      { label: "Registered Teams", href: "https://docs.google.com/spreadsheets/d/1BT2hHQufuZorei2g5WCbZpkftRFcOr9A5f9TKtuJ2KA/edit?usp=sharing" },
+      { label: "Registration Form — Coming Soon", href: "" },
+      { label: "Registered Teams — Coming Soon", href: "" },
     ],
-    highlight: "Features a special Pokémon Trial Event!",
   },
   {
     name: "2026 Division C Georgia State Tournament",
@@ -139,7 +139,7 @@ export const FAQ_ITEMS = [
   {
     question: "What is the registration fee?",
     answer:
-      "Early bird registration (Sept 2 – Oct 16): $110/team. Standard registration (Oct 17 – Dec 13): $150/team. Checks must be payable to Georgia Tech with 'Science Olympiad @ Georgia Tech' in the memo line.",
+      "Regular registration (August 9 – December 13): $190/team. Late registration (December 14 – January 10): $210/team. From August 9–22, only Georgia schools can register; schools outside Georgia may begin registering on August 23. Checks must be payable to Georgia Tech with 'Science Olympiad @ Georgia Tech' in the memo line.",
   },
   {
     question: "How can GT students get involved?",
