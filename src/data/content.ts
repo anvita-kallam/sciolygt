@@ -70,7 +70,7 @@ export const TOURNAMENTS: Tournament[] = [
       "August 23rd onward: schools outside Georgia may register",
     ],
     links: [
-      { label: "Registration Form — Coming Soon", href: "" },
+      { label: "Registration Form", href: "https://docs.google.com/forms/d/e/1FAIpQLSeZF6hLS6IhVbEPWeOWE9BvlG3u7rYImFx2ALSMXzg3_eVO0Q/viewform?usp=dialog" },
       { label: "Registered Teams — Coming Soon", href: "" },
     ],
   },
