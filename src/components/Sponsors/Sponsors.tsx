@@ -15,20 +15,6 @@ const Sponsors = () => (
         <p className="sponsors-intro">{SPONSORSHIP.intro}</p>
       </ContentParallax>
 
-      <div className="sponsor-tiers">
-        {SPONSORSHIP.tiers.map((tier, i) => (
-          <ContentParallax key={tier.name} speed={5 + i * 3}>
-            <div className={`sponsor-tier tier-${tier.name.toLowerCase()}`}>
-              <div className="tier-header">
-                <span className="tier-name">{tier.name}</span>
-                <span className="tier-amount">{tier.amount}</span>
-              </div>
-              <p className="tier-benefit">{tier.benefit}</p>
-            </div>
-          </ContentParallax>
-        ))}
-      </div>
-
       <ContentParallax speed={-6}>
         <div className="sponsor-contact">
           <p>

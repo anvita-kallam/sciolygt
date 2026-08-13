@@ -124,14 +124,7 @@ export const GET_INVOLVED = {
 };
 
 export const SPONSORSHIP = {
-  intro:
-    "Science Olympiad provides a STEM-oriented competition environment, where passionate high school students and Georgia Tech student volunteers coalesce. Funding is necessary to host the State tournament and workshops for Atlanta high school students on the prestigious Georgia Tech campus.",
-  tiers: [
-    { name: "Gold", amount: "$2,500+", benefit: "Major feature in all events, logo on any promotions, special mentions — in addition to rewards below." },
-    { name: "Silver", amount: "$1,000+", benefit: "Logo featured on t-shirts, mentions in selected events and media — in addition to rewards below." },
-    { name: "Bronze", amount: "$500+", benefit: "Acknowledgment during event, logo in program brochure." },
-  ],
-  sponsors: ["Georgia Tech Seal"],
+  intro: "More information will be posted soon.",
 };
 
 export const FAQ_ITEMS = [
