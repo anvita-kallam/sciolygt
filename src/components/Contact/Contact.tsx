@@ -39,11 +39,21 @@ const Contact = () => (
           <div className="footer-logo">
             <img src="/images/officialLogo.png" alt="Science Olympiad at Georgia Tech" className="footer-logo-img" />
           </div>
-          <p className="footer-copy">
-            2026 Science Olympiad at Georgia Tech, a Registered Student Organization.
-            Supported by Students for Atlanta Science Olympiad Inc, an independent
-            501(c)(3) nonprofit organization.
-          </p>
+          <div className="footer-meta">
+            <p className="footer-copy">
+              2026 Science Olympiad at Georgia Tech, a Registered Student Organization.
+              Supported by Students for Atlanta Science Olympiad Inc, an independent
+              501(c)(3) nonprofit organization.
+            </p>
+            <p className="footer-address">
+              150 Calborne Ct.
+              <br />
+              Johns Creek, GA, 30005
+            </p>
+            <a href="mailto:contact@sciolygatech.org" className="footer-email">
+              contact@sciolygatech.org
+            </a>
+          </div>
         </footer>
       </ContentParallax>
     </div>
