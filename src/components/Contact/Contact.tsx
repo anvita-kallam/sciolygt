@@ -40,7 +40,9 @@ const Contact = () => (
             <img src="/images/officialLogo.png" alt="Science Olympiad at Georgia Tech" className="footer-logo-img" />
           </div>
           <p className="footer-copy">
-            © {new Date().getFullYear()} Science Olympiad @ Georgia Tech
+            2026 Science Olympiad at Georgia Tech, a Registered Student Organization.
+            Supported by Students for Atlanta Science Olympiad Inc, an independent
+            501(c)(3) nonprofit organization.
           </p>
         </footer>
       </ContentParallax>
