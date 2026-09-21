@@ -44,6 +44,11 @@
   transform: translateX(4px);
 }
 
+.contact-link-static:hover {
+  transform: none;
+  cursor: default;
+}
+
 .link-label {
   font-size: 0.75rem;
   font-weight: 600;
@@ -105,7 +110,8 @@
 }
 
 .footer-copy,
-.footer-address {
+.footer-address,
+.footer-ein {
   margin: 0;
   font-size: 0.8rem;
   line-height: 1.5;
@@ -146,6 +152,7 @@
 
   .footer-copy,
   .footer-address,
+  .footer-ein,
   .footer-email {
     text-align: center;
   }

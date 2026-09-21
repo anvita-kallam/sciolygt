@@ -32,6 +32,10 @@ const Contact = () => (
             <span className="link-label">Science Olympiad National</span>
             <span className="link-value">soinc.org</span>
           </a>
+          <div className="contact-link contact-link-static">
+            <span className="link-label">EIN</span>
+            <span className="link-value">42-3459444</span>
+          </div>
         </ContentParallax>
       </div>
       <ContentParallax speed={3}>
@@ -50,6 +54,7 @@ const Contact = () => (
               <br />
               Johns Creek, GA, 30005
             </p>
+            <p className="footer-ein">EIN: 42-3459444</p>
             <a href="mailto:contact@sciolygatech.org" className="footer-email">
               contact@sciolygatech.org
             </a>
