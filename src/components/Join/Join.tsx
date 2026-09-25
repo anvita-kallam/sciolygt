@@ -37,12 +37,20 @@ const Join = () => (
               Join on Engage
             </a>
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSekFTVWk0ZQ-mK0fVWTKB21nae7Nm60SFrXWxuVJWlGmNUWpA/viewform"
+              href={GET_INVOLVED.volunteerUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="join-btn secondary"
             >
               Volunteer Sign-Up
+            </a>
+            <a
+              href={GET_INVOLVED.eventSupervisorUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="join-btn secondary"
+            >
+              Event Supervisor Application
             </a>
           </div>
         </div>

@@ -114,6 +114,9 @@ export const PAST_TOURNAMENTS: {
 
 export const GET_INVOLVED = {
   engageUrl: "https://gatech.campuslabs.com/engage/",
+  volunteerUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLSekFTVWk0ZQ-mK0fVWTKB21nae7Nm60SFrXWxuVJWlGmNUWpA/viewform",
+  eventSupervisorUrl: "https://forms.gle/mN4FfyZfoBiUcA3h9",
   steps: [
     { step: "01", title: "Visit Engage", description: "Go to gatech.campuslabs.com/engage/ and log in with your Georgia Tech email." },
     { step: "02", title: "Join the organization", description: "Search for Science Olympiad and click Join to become a member." },
