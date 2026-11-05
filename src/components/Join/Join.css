@@ -98,6 +98,17 @@
   box-shadow: none;
 }
 
+.join-btn-soon {
+  cursor: default;
+  opacity: 0.75;
+}
+
+.join-btn-soon:hover {
+  transform: none;
+  background: transparent;
+  box-shadow: none;
+}
+
 @media (max-width: 768px) {
   .join-section {
     padding: 4rem 1.25rem;

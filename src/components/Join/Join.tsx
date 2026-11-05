@@ -36,14 +36,20 @@ const Join = () => (
             <a href={GET_INVOLVED.engageUrl} target="_blank" rel="noopener noreferrer" className="join-btn">
               Join on Engage
             </a>
-            <a
-              href={GET_INVOLVED.volunteerUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="join-btn secondary"
-            >
-              Volunteer Sign-Up
-            </a>
+            {GET_INVOLVED.volunteerUrl ? (
+              <a
+                href={GET_INVOLVED.volunteerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="join-btn secondary"
+              >
+                Volunteer Sign-Up
+              </a>
+            ) : (
+              <span className="join-btn secondary join-btn-soon">
+                Volunteer Sign-Up — Coming Soon
+              </span>
+            )}
             <a
               href={GET_INVOLVED.eventSupervisorUrl}
               target="_blank"

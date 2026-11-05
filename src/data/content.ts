@@ -75,17 +75,17 @@ export const TOURNAMENTS: Tournament[] = [
     ],
   },
   {
-    name: "2026 Division C Georgia State Tournament",
-    date: "April 4, 2026",
+    name: "2027 Division C Georgia State Tournament",
+    date: "April 10, 2027",
     description:
-      "Science Olympiad at Georgia Tech is proud to host the 2026 Division C Georgia State Tournament. This event brings together hundreds of high school students from across the state to compete in rigorous science and engineering challenges.",
+      "Science Olympiad at Georgia Tech is proud to host the 2027 Division C Georgia State Tournament. This event brings together hundreds of high school students from across the state to compete in rigorous science and engineering challenges.",
     details: [
       "Volunteers needed for event logistics, proctoring, and general support",
       "No prior Science Olympiad experience required",
       "Free food and t-shirts provided for volunteers",
     ],
     links: [
-      { label: "Volunteer Sign-Up", href: "https://docs.google.com/forms/d/e/1FAIpQLSekFTVWk0ZQ-mK0fVWTKB21nae7Nm60SFrXWxuVJWlGmNUWpA/viewform" },
+      { label: "Volunteer Sign-Up — Coming Soon", href: "" },
     ],
   },
 ];
@@ -114,8 +114,7 @@ export const PAST_TOURNAMENTS: {
 
 export const GET_INVOLVED = {
   engageUrl: "https://gatech.campuslabs.com/engage/",
-  volunteerUrl:
-    "https://docs.google.com/forms/d/e/1FAIpQLSekFTVWk0ZQ-mK0fVWTKB21nae7Nm60SFrXWxuVJWlGmNUWpA/viewform",
+  volunteerUrl: "",
   eventSupervisorUrl: "https://forms.gle/mN4FfyZfoBiUcA3h9",
   steps: [
     { step: "01", title: "Visit Engage", description: "Go to gatech.campuslabs.com/engage/ and log in with your Georgia Tech email." },
@@ -127,14 +126,15 @@ export const GET_INVOLVED = {
 };
 
 export const SPONSORSHIP = {
-  intro: "More information will be posted soon.",
+  intro:
+    "Science Olympiad at Georgia Tech would not be possible without the generous donations from our sponsors. All contributions are tax-deductible through our 501(c)(3) organization. If your company would like to get involved with Science Olympiad at Georgia Tech, please contact us at sponsorships@sciolygatech.org for more information.",
 };
 
 export const FAQ_ITEMS = [
   {
     question: "How many teams can participate in YJI?",
     answer:
-      "Due to logistical constraints, we accept 50 Division C teams and 30 Division B teams. Spots are allotted on a first-come, first-served basis if registration exceeds capacity.",
+      "Due to logistical constraints, we accept 60 Division C teams and 40 Division B teams. Spots are allotted on a first-come, first-served basis if registration exceeds capacity.",
   },
   {
     question: "How many teams per school are allowed?",
