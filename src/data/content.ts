@@ -30,22 +30,22 @@ export type TeamMember = {
 };
 
 export const TEAM: TeamMember[] = [
-  { name: "Ethan Maraldo", role: "President", img: "/images/execPics/Ethan.jpeg", group: "Leadership" },
-  { name: "Femke Kovoor", role: "VP of Club Logistics & Outreach", img: "/images/execPics/Femke.jpg", group: "Leadership" },
-  { name: "Krish Patil", role: "VP of Tournament Logistics", img: "/images/execPics/Krish.jpeg", group: "Leadership" },
-  { name: "Victor Hesu", role: "VP of Communications", img: "/images/execPics/Victor.jpg", group: "Leadership" },
-  { name: "Samrita Shetty", role: "Logistics Co-Director", img: "/images/execPics/Samrita.jpeg", group: "Logistics" },
-  { name: "Rachel Nam", role: "Logistics Co-Director", img: "/images/execPics/Rachel.jpg", group: "Logistics" },
-  { name: "Thomas Becker", role: "Exam Co-Director", img: "/images/execPics/Thomas.JPG", group: "Exam" },
-  { name: "Larissa Martin", role: "Exam Co-Director", img: "/images/execPics/Lyn.jpg", group: "Exam" },
-  { name: "Devam Shrivastava", role: "Build Co-Director", img: "/images/execPics/Devam.jpeg", group: "Build" },
-  { name: "Nathan Donagi", role: "Build Co-Director", img: "/images/execPics/Nathan.jpg", group: "Build" },
-  { name: "Justin Li", role: "Finance Co-Director", img: "/images/execPics/Justin.jpg", group: "Finance" },
-  { name: "Sishnukeshav Balamurali", role: "Finance Co-Director", img: "/images/execPics/Sishnu.jpg", group: "Finance" },
-  { name: "Swathi Mugundu Pradeep", role: "Creative Co-Director", img: "/images/execPics/Swathi.jpg", group: "Creative" },
-  { name: "Melody Lee", role: "Creative Co-Director", img: "/images/execPics/Melody.jpeg", group: "Creative" },
+  { name: "Lyn Martin", role: "President", img: "/images/execPics/Lyn.jpg", group: "Leadership" },
+  { name: "Ethan Maraldo", role: "VP of Communications", img: "/images/execPics/Ethan.jpeg", group: "Leadership" },
+  { name: "Samrita Shetty", role: "VP of Tournament", img: "/images/execPics/Samrita.jpeg", group: "Leadership" },
+  { name: "Connor Schmitt", role: "VP of Outreach", img: "/images/execPics/Connor.jpg", group: "Leadership" },
+  { name: "Anvita Kallam", role: "Creative Co-Director", img: "/images/execPics/Anvita.jpg", group: "Creative" },
+  { name: "Rachel Nam", role: "Creative Co-Director", img: "/images/execPics/Rachel.jpg", group: "Creative" },
   { name: "Johnny Chen", role: "Outreach Co-Director", img: "/images/execPics/Johnny.jpg", group: "Outreach" },
-  { name: "Yaitihya Sahoo", role: "Outreach Co-Director", img: "/images/execPics/Yaiti.jpg", group: "Outreach" },
+  { name: "Sean Chen", role: "Outreach Co-Director", img: "/images/execPics/Sean.jpg", group: "Outreach" },
+  { name: "Krish Patil", role: "Logistics Co-Director", img: "/images/execPics/Krish.jpeg", group: "Logistics" },
+  { name: "Joseph Pan", role: "Logistics Co-Director", img: "", group: "Logistics" },
+  { name: "Thomas Becker", role: "Exam Co-Director", img: "/images/execPics/Thomas.JPG", group: "Exam" },
+  { name: "Felix Gusic", role: "Exam Co-Director", img: "", group: "Exam" },
+  { name: "Nathan Donagi", role: "Build Co-Director", img: "/images/execPics/Nathan.jpg", group: "Build" },
+  { name: "Arthur Armaing", role: "Build Co-Director", img: "/images/execPics/Arthur.jpg", group: "Build" },
+  { name: "Vishnukeshav (Sishnukeshav) Balamurali", role: "Finance Co-Director", img: "/images/execPics/Sishnu.jpg", group: "Finance" },
+  { name: "Somil Choure", role: "Finance Co-Director", img: "/images/execPics/Somil.jpg", group: "Finance" },
 ];
 
 export type Tournament = {

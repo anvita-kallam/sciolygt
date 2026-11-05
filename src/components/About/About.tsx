@@ -121,7 +121,11 @@ const About = () => {
                     style={{ transform: getBubbleTransform(i, selected) }}
                   >
                     <div className="team-photo-ring">
-                      <img src={member.img} alt={member.name} className="team-photo" />
+                      {member.img ? (
+                        <img src={member.img} alt={member.name} className="team-photo" />
+                      ) : (
+                        <div className="team-photo team-photo--blank" aria-hidden />
+                      )}
                     </div>
                     <div className="team-bubble-text">
                       <span className="team-group-pill">{member.group}</span>

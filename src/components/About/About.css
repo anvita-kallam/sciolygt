@@ -233,6 +233,11 @@
   border: 2px solid rgba(2, 8, 16, 0.6);
 }
 
+.team-photo--blank {
+  background: rgba(179, 163, 105, 0.12);
+  border: 2px solid rgba(179, 163, 105, 0.28);
+}
+
 .team-bubble-text {
   display: flex;
   flex-direction: column;
