@@ -44,7 +44,7 @@ export const TEAM: TeamMember[] = [
   { name: "Felix Gusic", role: "Exam Co-Director", img: "", group: "Exam" },
   { name: "Nathan Donagi", role: "Build Co-Director", img: "/images/execPics/Nathan.jpg", group: "Build" },
   { name: "Arthur Armaing", role: "Build Co-Director", img: "/images/execPics/Arthur.jpg", group: "Build" },
-  { name: "Vishnukeshav (Sishnukeshav) Balamurali", role: "Finance Co-Director", img: "/images/execPics/Sishnu.jpg", group: "Finance" },
+  { name: "Sishnukeshav Balamurali", role: "Finance Co-Director", img: "/images/execPics/Sishnu.jpg", group: "Finance" },
   { name: "Somil Choure", role: "Finance Co-Director", img: "/images/execPics/Somil.jpg", group: "Finance" },
 ];
 
