@@ -71,7 +71,8 @@ export const TOURNAMENTS: Tournament[] = [
     ],
     links: [
       { label: "Registration Form", href: "https://docs.google.com/forms/d/e/1FAIpQLSeZF6hLS6IhVbEPWeOWE9BvlG3u7rYImFx2ALSMXzg3_eVO0Q/viewform?usp=dialog" },
-      { label: "Registered Teams — Coming Soon", href: "" },
+      { label: "Registered Teams", href: "#yji-2027-teams" },
+      { label: "Download Team List (PDF)", href: "/files/YJI-2027-Team-List.pdf" },
     ],
   },
   {
