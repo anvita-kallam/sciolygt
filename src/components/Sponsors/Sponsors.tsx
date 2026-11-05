@@ -1,6 +1,8 @@
-import { SPONSORSHIP, CONTACT } from "../../data/content";
+import { SPONSORSHIP } from "../../data/content";
 import ContentParallax from "../Parallax/ContentParallax";
 import "./Sponsors.css";
+
+const SPONSORSHIP_EMAIL = "sponsorships@sciolygatech.org";
 
 const Sponsors = () => (
   <section id="sponsors" className="sponsors-section">
@@ -19,7 +21,7 @@ const Sponsors = () => (
         <div className="sponsor-contact">
           <p>
             Interested in sponsoring? Reach out at{" "}
-            <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+            <a href={`mailto:${SPONSORSHIP_EMAIL}`}>{SPONSORSHIP_EMAIL}</a>
           </p>
         </div>
       </ContentParallax>
